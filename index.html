@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EU Export Compliance Checker — Pakistani Textile Exporters</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* ── Variables ───────────────────────────────────────────── */
@@ -633,8 +633,8 @@ body {
   margin-top: 8px;
 }
 
-/* ── Ahmed tip ───────────────────────────────────────────── */
-.ahmed-tip {
+/* ── Ahmad tip ───────────────────────────────────────────── */
+.ahmad-tip {
   margin: 0 36px 20px;
   background: var(--gold-lt);
   border: 1px solid #E8D070;
@@ -644,7 +644,7 @@ body {
   gap: 12px;
   align-items: flex-start;
 }
-.ahmed-tip-icon {
+.ahmad-tip-icon {
   width: 32px; height: 32px;
   background: var(--gold);
   border-radius: 50%;
@@ -652,7 +652,7 @@ body {
   font-size: 14px;
   flex-shrink: 0;
 }
-.ahmed-tip-body strong {
+.ahmad-tip-body strong {
   display: block;
   font-size: 11.5px;
   font-weight: 700;
@@ -661,7 +661,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 3px;
 }
-.ahmed-tip-body p {
+.ahmad-tip-body p {
   font-size: 13.5px;
   color: #5C4200;
   line-height: 1.6;
@@ -825,7 +825,7 @@ body {
     background: #1A5C38 !important;
     border-color: #1A5C38 !important;
   }
-  .callout, .ahmed-tip { margin: 0 20px 14px; }
+  .callout, .ahmad-tip { margin: 0 20px 14px; }
   .card-pct { font-size: 22px; }
   .item-text { font-size: 12px; }
   .item-detail { font-size: 11px; }
@@ -859,22 +859,99 @@ body {
   .card-header { flex-direction: column; padding: 20px 20px 16px; }
   .card-progress { flex-direction: row; align-items: center; }
   .checklist { padding: 8px 20px 24px; }
-  .callout, .ahmed-tip { margin: 0 20px 16px; }
+  .callout, .ahmad-tip { margin: 0 20px 16px; }
   .hero-stats { gap: 20px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+
+/* ── Language Toggle ─────────────────────────────────────── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--green-xlt);
+  border: 1.5px solid var(--green-lt);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-right: 12px;
+}
+.lang-btn {
+  padding: 5px 12px;
+  border: none;
+  background: transparent;
+  color: var(--ink-light);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all var(--transition);
+}
+.lang-btn.active {
+  background: var(--green);
+  color: #fff;
+}
+.lang-btn:hover:not(.active) {
+  color: var(--green);
+}
+
+/* ── RTL Support ─────────────────────────────────────────── */
+[dir="rtl"] {
+  text-align: right;
+}
+[dir="rtl"] .logo-block,
+[dir="rtl"] .header-inner,
+[dir="rtl"] .hero-stats,
+[dir="rtl"] .progress-bar-inner,
+[dir="rtl"] .critical-strip-inner,
+[dir="rtl"] .card-header,
+[dir="rtl"] .check-item,
+[dir="rtl"] .callout,
+[dir="rtl"] .ahmed-tip,
+[dir="rtl"] .footer-inner,
+[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+[dir="rtl"] .card-header-left { text-align: right; }
+[dir="rtl"] .card-progress { align-items: flex-start; }
+[dir="rtl"] .critical-jump { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .item-tag { margin-left: 0; margin-right: 8px; }
+[dir="rtl"] .section-tabs { direction: rtl; }
+[dir="rtl"] .hero-badge::before { margin-right: 0; margin-left: 8px; }
+[dir="rtl"] .check-divider { text-align: right; }
+[dir="rtl"] .callout-warn { border-left: none; border-right: 3px solid #D97706; }
+[dir="rtl"] .callout-info { border-left: none; border-right: 3px solid var(--blue); }
+
+/* ── Urdu Font ───────────────────────────────────────────── */
+.urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+  line-height: 2.2;
+  font-size: 16px;
+}
+[dir="rtl"] body {
+  font-family: 'Noto Nastaliq Urdu', 'DM Sans', sans-serif;
+}
+[dir="rtl"] .hero h1,
+[dir="rtl"] .card-header h2,
+[dir="rtl"] .score-band-body h3,
+[dir="rtl"] .footer-brand strong,
+[dir="rtl"] .stat-num {
+  font-family: 'Noto Nastaliq Urdu', 'Playfair Display', serif;
+}
 </style>
+<base target="_blank">
 </head>
 
 <body>
 
 <!-- ── Top banner ─────────────────────────────────────────── -->
 <div class="top-banner">
-  🇵🇰 For Pakistani Textile Exporters
+  <span data-en="🇵🇰 For Pakistani Textile Exporters" data-ur="🇵🇰 پاکستانی ٹیکسٹائل ایکسپورٹرز کے لیے">🇵🇰 For Pakistani Textile Exporters</span>
   <span>|</span>
-  Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest
+  <span data-en="Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest" data-ur="ایمبیسی آف پاکستان، بڈاپسٹ کے کمرشل ونگ کے تعاون سے تیار کردہ">Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest</span>
   <span>|</span>
-  Last updated: 2026
+  <span data-en="Last updated: 2026" data-ur="آخری اپ ڈیٹ: 2026">Last updated: 2026</span>
 </div>
 
 <!-- ── Header ─────────────────────────────────────────────── -->
@@ -883,26 +960,31 @@ body {
     <div class="logo-block">
       <div class="logo-flag">🇵🇰</div>
       <div class="logo-text">
-        <strong>EU Compliance Checker</strong>
-        <small>Pakistani Textile Exporters · EU Market</small>
+        <strong data-en="EU Compliance Checker" data-ur="یو ای کمپلائنس چیکر">EU Compliance Checker</strong>
+        <small data-en="Pakistani Textile Exporters · EU Market" data-ur="پاکستانی ٹیکسٹائل ایکسپورٹرز · یورپی یونین مارکیٹ">Pakistani Textile Exporters · EU Market</small>
       </div>
     </div>
     <div class="header-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLanguage('en')" id="langEn">English</button>
+        <button class="lang-btn" onclick="setLanguage('ur')" id="langUr">اردو</button>
+      </div>
+      
       <button class="btn btn-ghost" onclick="resetAll()" title="Reset all checkboxes">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-        Reset
+        <span data-en="Reset" data-ur="ری سیٹ">Reset</span>
       </button>
       <button class="btn btn-outline" onclick="copyLink()" id="shareBtn">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        Share Tool
+        <span data-en="Share Tool" data-ur="ٹول شیئر کریں">Share Tool</span>
       </button>
       <button class="btn btn-outline" onclick="toggleAllSections()">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
-        View All
+        <span data-en="View All" data-ur="سب دیکھیں">View All</span>
       </button>
       <button class="btn btn-primary" onclick="window.print()">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Print PDF
+        <span data-en="Print PDF" data-ur="پی ڈی ایف پرنٹ کریں">Print PDF</span>
       </button>
     </div>
   </div>
@@ -911,25 +993,25 @@ body {
 <!-- ── Hero ───────────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Pakistani Textile Exporters — EU Market Access</div>
+    <div class="hero-badge" data-en="Pakistani Textile Exporters — EU Market Access" data-ur="پاکستانی ٹیکسٹائل ایکسپورٹرز — یورپی یونین مارکیٹ رسائی">Pakistani Textile Exporters — EU Market Access</div>
     <h1>EU Export<br><em>Compliance Checker</em></h1>
-    <p class="hero-sub">A practical pre-shipment checklist tool for Pakistani textile factory owners exporting to the European Union. Built on current 2025–2026 EU regulations. Free to use, free to print.</p>
+    <p class="hero-sub" data-en="A practical pre-shipment checklist tool for Pakistani textile factory owners exporting to the European Union. Built on current 2025–2026 EU regulations. Free to use, free to print." data-ur="یورپی یونین کو برآمد کرنے والے پاکستانی ٹیکسٹائل فیکٹری مالکان کے لیے ایک عملی پری-شپمنٹ چیک لسٹ ٹول۔ موجودہ 2025–2026 یو ای ریگولیشنز پر مبنی۔ استعمال کرنے اور پرنٹ کرنے کے لیے مفت۔">A practical pre-shipment checklist tool for Pakistani textile factory owners exporting to the European Union. Built on current 2025–2026 EU regulations. Free to use, free to print.</p>
     <div class="hero-stats">
       <div class="stat">
         <span class="stat-num">5</span>
-        <span class="stat-label">Compliance Areas</span>
+        <span class="stat-label" data-en="Compliance Areas" data-ur="کمپلائنس شعبے">Compliance Areas</span>
       </div>
       <div class="stat">
         <span class="stat-num">31</span>
-        <span class="stat-label">Checklist Items</span>
+        <span class="stat-label" data-en="Checklist Items" data-ur="چیک لسٹ آئٹمز">Checklist Items</span>
       </div>
       <div class="stat">
         <span class="stat-num">0%</span>
-        <span class="stat-label">Tariff with GSP+</span>
+        <span class="stat-label" data-en="Tariff with GSP+" data-ur="جی ایس پی پلس کے ساتھ ٹیرف">Tariff with GSP+</span>
       </div>
       <div class="stat">
         <span class="stat-num">$0</span>
-        <span class="stat-label">Cost to Use</span>
+        <span class="stat-label" data-en="Cost to Use" data-ur="استعمال کی لاگت">Cost to Use</span>
       </div>
     </div>
   </div>
@@ -938,13 +1020,13 @@ body {
 <!-- ── Progress bar ───────────────────────────────────────── -->
 <div class="progress-bar-wrap">
   <div class="progress-bar-inner">
-    <span class="progress-label" id="progressLabel">Overall Readiness</span>
+    <span class="progress-label" id="progressLabel" data-en="Overall Readiness" data-ur="مجموعی تیاری">Overall Readiness</span>
     <div class="progress-track">
       <div class="progress-fill" id="progressFill"></div>
     </div>
     <span class="progress-pct" id="progressPct">0%</span>
-    <span class="progress-status" id="progressStatus">0 of 31 items checked</span>
-    <span class="save-indicator" id="saveIndicator" title="Progress is automatically saved in your browser">💾 Auto-saved</span>
+    <span class="progress-status" id="progressStatus" data-en="0 of 31 items checked" data-ur="31 میں سے 0 آئٹمز چیک کیے گئے">0 of 31 items checked</span>
+    <span class="save-indicator" id="saveIndicator" data-en="💾 Auto-saved" data-ur="💾 خود بخود محفوظ" title="Progress is automatically saved in your browser">💾 Auto-saved</span>
   </div>
 </div>
 
@@ -952,8 +1034,8 @@ body {
 <div class="critical-strip" id="criticalStrip">
   <div class="critical-strip-inner">
     <span class="critical-icon">🔴</span>
-    <span id="criticalText">9 critical items unchecked — address these before shipping</span>
-    <button class="critical-jump" onclick="jumpToCritical()">Show me →</button>
+    <span id="criticalText" data-en="9 critical items unchecked — address these before shipping" data-ur="9 اہم آئٹمز چیک نہیں کیے گئے — شپنگ سے پہلے ان کو حل کریں">9 critical items unchecked — address these before shipping</span>
+    <button class="critical-jump" onclick="jumpToCritical()" data-en="Show me →" data-ur="مجھے دکھائیں →">Show me →</button>
   </div>
 </div>
 
@@ -961,7 +1043,7 @@ body {
 <main class="main" id="mainContent">
 
   <!-- Print header -->
-  <div class="print-header">
+  <div class="print-header" data-en="EU Export Compliance Checker · Pakistani Textile Exporters · Developed by Ali Ahmad in cooperation with Commercial Wing, Embassy of Pakistan, Budapest · 2026" data-ur="یو ای ایکسپورٹ کمپلائنس چیکر · پاکستانی ٹیکسٹائل ایکسپورٹرز · علی احمد نے ایمبیسی آف پاکستان، بڈاپسٹ کے کمرشل ونگ کے تعاون سے تیار کیا · 2026">
     EU Export Compliance Checker · Pakistani Textile Exporters · Developed by Ali Ahmad in cooperation with Commercial Wing, Embassy of Pakistan, Budapest · 2026
   </div>
 
@@ -971,7 +1053,7 @@ body {
   </div>
 
   <!-- Toast notification -->
-  <div class="toast" id="toast">✓ Link copied — share with your freight forwarder or buying agent</div>
+  <div class="toast" id="toast" data-en="✓ Link copied — share with your freight forwarder or buying agent" data-ur="✓ لنک کاپی ہو گیا — اپنے فریٹ فارورڈر یا خریداری ایجنٹ کے ساتھ شیئر کریں">✓ Link copied — share with your freight forwarder or buying agent</div>
 
   <!-- ── Section tabs ──────────────────────────────────────── -->
   <div class="section-tabs" id="sectionTabs">
@@ -1003,9 +1085,9 @@ body {
   <div class="section-card visible" id="section-0">
     <div class="card-header">
       <div class="card-header-left">
-        <div class="card-section-num">Section 1 of 5</div>
-        <h2>GSP+ Origin Rules</h2>
-        <p>Pakistan's zero-tariff benefit only applies if your goods genuinely qualify. These checks ensure your shipment can claim the GSP+ preferential rate — saving your buyer 9–12% in customs duties.</p>
+        <div class="card-section-num" data-en="Section 1 of 5" data-ur="حصہ 1 از 5">Section 1 of 5</div>
+        <h2 data-en="GSP+ Origin Rules" data-ur="جی ایس پی پلس اصلیت کے قواعد">GSP+ Origin Rules</h2>
+        <p data-en="Pakistan's zero-tariff benefit only applies if your goods genuinely qualify. These checks ensure your shipment can claim the GSP+ preferential rate — saving your buyer 9–12% in customs duties." data-ur="پاکستان کا زیرو ٹیرف فائدہ صرف تب ہی لاگو ہوتا ہے جب آپ کی اشیاء واقعی اہل ہوں۔ یہ چیکس یقینی بناتے ہیں کہ آپ کی شپمنٹ جی ایس پی پلس ترجیحی شرح کا دعویٰ کر سکے — جس سے آپ کے خریدار کو کسٹم ڈیوٹی میں 9–12% کی بچت ہوگی۔">Pakistan's zero-tariff benefit only applies if your goods genuinely qualify. These checks ensure your shipment can claim the GSP+ preferential rate — saving your buyer 9–12% in customs duties.</p>
       </div>
       <div class="card-progress">
         <span class="card-pct" id="pct-0">0%</span>
@@ -1016,14 +1098,14 @@ body {
 
     <div class="callout callout-warn">
       <span class="callout-icon">⚠️</span>
-      <div><strong>Most costly mistake:</strong> Declaring GSP+ on fabric that was woven outside Pakistan (e.g. imported from China), then only cut and sewn in Pakistan. This fails the double transformation rule. Your buyer will be billed the full tariff and will recover it from you.</div>
+      <div data-en="<strong>Most costly mistake:</strong> Declaring GSP+ on fabric that was woven outside Pakistan (e.g. imported from China), then only cut and sewn in Pakistan. This fails the double transformation rule. Your buyer will be billed the full tariff and will recover it from you." data-ur="<strong>سب سے مہنگی غلطی:</strong> جی ایس پی پلس کا اعلان اس کپڑے پر کرنا جو پاکستان کے باہر بنا ہو (مثلاً چین سے درآمد شدہ)، پھر صرف پاکستان میں کٹا اور سیا گیا ہو۔ یہ ڈبل ٹرانسفارمیشن قاعدہ میں ناکام ہوتا ہے۔ آپ کے خریدار سے پورا ٹیرف وصول کیا جائے گا اور وہ اسے آپ سے وصول کرے گا۔"><strong>Most costly mistake:</strong> Declaring GSP+ on fabric that was woven outside Pakistan (e.g. imported from China), then only cut and sewn in Pakistan. This fails the double transformation rule. Your buyer will be billed the full tariff and will recover it from you.</div>
     </div>
 
-    <div class="ahmed-tip">
-      <div class="ahmed-tip-icon">💡</div>
-      <div class="ahmed-tip-body">
-        <strong>Ahmed's Example</strong>
-        <p>Ahmed buys Pakistani yarn, weaves it into fabric at his Faisalabad mill, then cuts and sews the finished linen — both steps in Pakistan. He qualifies for GSP+. If he instead imports Chinese grey fabric and only sews it in Faisalabad, he does NOT qualify.</p>
+    <div class="ahmad-tip">
+      <div class="ahmad-tip-icon">💡</div>
+      <div class="ahmad-tip-body">
+        <strong data-en="Ahmad's Example" data-ur="احمد کی مثال">Ahmad's Example</strong>
+        <p data-en="Ahmad buys Pakistani yarn, weaves it into fabric at his Faisalabad mill, then cuts and sews the finished linen — both steps in Pakistan. He qualifies for GSP+. If he instead imports Chinese grey fabric and only sews it in Faisalabad, he does NOT qualify." data-ur="احمد پاکستانی سوت خریدتا ہے، اسے فیصل آباد کی اپنی مل میں کپڑے میں بناتا ہے، پھر تیار شدہ لینن کو کاٹتا اور سیتا ہے — دونوں مراحل پاکستان میں۔ وہ جی ایس پی پلس کے لیے اہل ہے۔ اگر وہ اس کے بجائے چینی گرے فیبرک درآمد کرے اور صرف فیصل آباد میں سئے، تو وہ اہل نہیں ہوگا۔">Ahmad buys Pakistani yarn, weaves it into fabric at his Faisalabad mill, then cuts and sews the finished linen — both steps in Pakistan. He qualifies for GSP+. If he instead imports Chinese grey fabric and only sews it in Faisalabad, he does NOT qualify.</p>
       </div>
     </div>
 
@@ -1033,51 +1115,51 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I know the correct HS code for my products <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">Garments (knitted) = HS Ch. 61 · Garments (woven) = HS Ch. 62 · Home textiles = HS Ch. 63 · Cotton fabric = HS Ch. 52. Wrong HS code = wrong tariff rate.</div>
+          <div class="item-text" data-en="I know the correct HS code for my products <span class='item-tag tag-critical'>Critical</span>" data-ur="میں اپنے پروڈکٹس کے لیے درست ایچ ایس کوڈ جانتا ہوں <span class='item-tag tag-critical'>اہم</span>">I know the correct HS code for my products <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="Garments (knitted) = HS Ch. 61 · Garments (woven) = HS Ch. 62 · Home textiles = HS Ch. 63 · Cotton fabric = HS Ch. 52. Wrong HS code = wrong tariff rate." data-ur="پوشاک (بنا ہوا) = ایچ ایس چپٹر 61 · پوشاک (بغیر بنا) = ایچ ایس چپٹر 62 · گھریلو ٹیکسٹائل = ایچ ایس چپٹر 63 · کپاس کا کپڑا = ایچ ایس چپٹر 52۔ غلط ایچ ایس کوڈ = غلط ٹیرف شرح۔">Garments (knitted) = HS Ch. 61 · Garments (woven) = HS Ch. 62 · Home textiles = HS Ch. 63 · Cotton fabric = HS Ch. 52. Wrong HS code = wrong tariff rate.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">The HS code on my invoice matches the HS code on my bill of lading</div>
-          <div class="item-detail">Mismatches between documents trigger automatic customs flags and delays at the EU port of entry.</div>
+          <div class="item-text" data-en="The HS code on my invoice matches the HS code on my bill of lading" data-ur="میرے انوائس پر ایچ ایس کوڈ میرے بل آف لیڈنگ پر ایچ ایس کوڈ سے مماثل ہے">The HS code on my invoice matches the HS code on my bill of lading</div>
+          <div class="item-detail" data-en="Mismatches between documents trigger automatic customs flags and delays at the EU port of entry." data-ur="دستاویزات کے درمیان عدم مماثلت خودکار کسٹم فلیگز اور یو ای پورٹ آف انٹری پر تاخیر کا باعث بنتی ہے۔">Mismatches between documents trigger automatic customs flags and delays at the EU port of entry.</div>
         </div>
       </div>
 
-      <div class="check-divider">Double Transformation — Origin Qualification</div>
+      <div class="check-divider" data-en="Double Transformation — Origin Qualification" data-ur="ڈبل ٹرانسفارمیشن — اصلیت کی اہلیت">Double Transformation — Origin Qualification</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My fabric was woven or knitted in Pakistan — not imported as ready-made fabric <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">EU double transformation rule: both weaving AND cutting/sewing must happen in Pakistan. Fabric imported from China or India and only sewn in Pakistan does NOT qualify for GSP+.</div>
-        </div>
-      </div>
-
-      <div class="check-item" onclick="toggleItem(this)">
-        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
-        <div class="item-body">
-          <div class="item-text">I have supplier invoices or mill certificates showing where my yarn and fabric were sourced</div>
-          <div class="item-detail">If EU customs audits your origin declaration, you need paper evidence. Keep these records for at least 3 years.</div>
-        </div>
-      </div>
-
-      <div class="check-divider">REX Registration or Form A Certificate</div>
-
-      <div class="check-item" onclick="toggleItem(this)">
-        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
-        <div class="item-body">
-          <div class="item-text">I am registered as a REX exporter with TDAP — OR — I have a Form A certificate for this shipment <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">Without one of these, your buyer cannot claim the GSP+ zero tariff at EU customs. REX registration is free via TDAP (tdap.gov.pk) and takes 2–4 weeks. Apply once, use forever.</div>
+          <div class="item-text" data-en="My fabric was woven or knitted in Pakistan — not imported as ready-made fabric <span class='item-tag tag-critical'>Critical</span>" data-ur="میرا کپڑا پاکستان میں بنا یا بنا ہوا ہے — تیار شدہ کپڑے کی صورت میں درآمد نہیں ہوا <span class='item-tag tag-critical'>اہم</span>">My fabric was woven or knitted in Pakistan — not imported as ready-made fabric <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="EU double transformation rule: both weaving AND cutting/sewing must happen in Pakistan. Fabric imported from China or India and only sewn in Pakistan does NOT qualify for GSP+." data-ur="یو ای ڈبل ٹرانسفارمیشن قاعدہ: بننا اور کاٹنا/سینا دونوں پاکستان میں ہونا چاہیے۔ چین یا ہندوستان سے درآمد شدہ کپڑا جو صرف پاکستان میں سیا گیا ہو جی ایس پی پلس کے لیے اہل نہیں ہے۔">EU double transformation rule: both weaving AND cutting/sewing must happen in Pakistan. Fabric imported from China or India and only sewn in Pakistan does NOT qualify for GSP+.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My commercial invoice includes the correct REX origin declaration statement</div>
+          <div class="item-text" data-en="I have supplier invoices or mill certificates showing where my yarn and fabric were sourced" data-ur="میرے پاس سپلائر انوائسز یا مل سرٹیفکیٹس ہیں جو بتاتے ہیں کہ میرا سوت اور کپڑا کہاں سے حاصل کیا گیا">I have supplier invoices or mill certificates showing where my yarn and fabric were sourced</div>
+          <div class="item-detail" data-en="If EU customs audits your origin declaration, you need paper evidence. Keep these records for at least 3 years." data-ur="اگر یو ای کسٹم آپ کی اصلیت کے اعلان کی آڈٹ کرے، تو آپ کو کاغذی ثبوت درکار ہے۔ ان ریکارڈز کو کم از کم 3 سال تک محفوظ رکھیں۔">If EU customs audits your origin declaration, you need paper evidence. Keep these records for at least 3 years.</div>
+        </div>
+      </div>
+
+      <div class="check-divider" data-en="REX Registration or Form A Certificate" data-ur="ریکس رجسٹریشن یا فارم اے سرٹیفکیٹ">REX Registration or Form A Certificate</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text" data-en="I am registered as a REX exporter with TDAP — OR — I have a Form A certificate for this shipment <span class='item-tag tag-critical'>Critical</span>" data-ur="میں ٹی ڈی اے پی کے ساتھ ایکسپورٹر کے طور پر ریکس رجسٹرڈ ہوں — یا — اس شپمنٹ کے لیے میرے پاس فارم اے سرٹیفکیٹ ہے <span class='item-tag tag-critical'>اہم</span>">I am registered as a REX exporter with TDAP — OR — I have a Form A certificate for this shipment <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="Without one of these, your buyer cannot claim the GSP+ zero tariff at EU customs. REX registration is free via TDAP (tdap.gov.pk) and takes 2–4 weeks. Apply once, use forever." data-ur="ان میں سے ایک کے بغیر، آپ کا خریدار یو ای کسٹم پر جی ایس پی پلس زیرو ٹیرف کا دعویٰ نہیں کر سکتا۔ ریکس رجسٹریشن ٹی ڈی اے پی (tdap.gov.pk) کے ذریعے مفت ہے اور 2–4 ہفتے لگتے ہیں۔ ایک بار درخواست دیں، ہمیشہ استعمال کریں۔">Without one of these, your buyer cannot claim the GSP+ zero tariff at EU customs. REX registration is free via TDAP (tdap.gov.pk) and takes 2–4 weeks. Apply once, use forever.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text" data-en="My commercial invoice includes the correct REX origin declaration statement" data-ur="میرے کمرشل انوائس میں درست ریکس اصلیت کا اعلان بیان شامل ہے">My commercial invoice includes the correct REX origin declaration statement</div>
           <div class="item-detail">The exact required text: "I, the exporter of the products covered by this document, declare that, except where otherwise clearly indicated, these products are of Pakistan preferential origin." Followed by your REX number.</div>
         </div>
       </div>
@@ -1085,8 +1167,8 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I understand that if my origin declaration is wrong, my buyer will be billed the full tariff — and will recover it from me</div>
-          <div class="item-detail">On a $20,000 shipment of garments, the full MFN tariff can be $2,000–$2,400. This amount becomes your liability if the origin declaration fails.</div>
+          <div class="item-text" data-en="I understand that if my origin declaration is wrong, my buyer will be billed the full tariff — and will recover it from me" data-ur="میں سمجھتا ہوں کہ اگر میرا اصلیت کا اعلان غلط ہے، تو میرے خریدار سے پورا ٹیرف وصول کیا جائے گا — اور وہ اسے مجھ سے وصول کرے گا">I understand that if my origin declaration is wrong, my buyer will be billed the full tariff — and will recover it from me</div>
+          <div class="item-detail" data-en="On a $20,000 shipment of garments, the full MFN tariff can be $2,000–$2,400. This amount becomes your liability if the origin declaration fails." data-ur="پوشاک کی $20,000 کی شپمنٹ پر، پورا ایم ایف این ٹیرف $2,000–$2,400 ہو سکتا ہے۔ یہ رقم آپ کی ذمہ داری بن جاتی ہے اگر اصلیت کا اعلان ناکام ہو۔">On a $20,000 shipment of garments, the full MFN tariff can be $2,000–$2,400. This amount becomes your liability if the origin declaration fails.</div>
         </div>
       </div>
     </div>
@@ -1098,9 +1180,9 @@ body {
   <div class="section-card" id="section-1">
     <div class="card-header">
       <div class="card-header-left">
-        <div class="card-section-num">Section 2 of 5</div>
-        <h2>REACH Chemical Testing</h2>
-        <p>The EU bans certain chemicals in textile products. If your fabric contains banned substances above legal limits, EU customs can reject and destroy your entire container. A pre-shipment test costs $150–$400. A failed container costs thousands.</p>
+        <div class="card-section-num" data-en="Section 2 of 5" data-ur="حصہ 2 از 5">Section 2 of 5</div>
+        <h2 data-en="REACH Chemical Testing" data-ur="ریچ کیمیکل ٹیسٹنگ">REACH Chemical Testing</h2>
+        <p data-en="The EU bans certain chemicals in textile products. If your fabric contains banned substances above legal limits, EU customs can reject and destroy your entire container. A pre-shipment test costs $150–$400. A failed container costs thousands." data-ur="یورپی یونین ٹیکسٹائل پروڈکٹس میں مخصوص کیمیکلز پر پابندی عائد کرتا ہے۔ اگر آپ کے کپڑے میں قانونی حدود سے زیادہ ممنوع مادے ہیں، تو یو ای کسٹم آپ کا پورا کنٹینر مسترد اور تباہ کر سکتا ہے۔ پری-شپمنٹ ٹیسٹ کی لاگت $150–$400 ہے۔ ناکام کنٹینر کی لاگت ہزاروں میں ہے۔">The EU bans certain chemicals in textile products. If your fabric contains banned substances above legal limits, EU customs can reject and destroy your entire container. A pre-shipment test costs $150–$400. A failed container costs thousands.</p>
       </div>
       <div class="card-progress">
         <span class="card-pct" id="pct-1">0%</span>
@@ -1111,60 +1193,60 @@ body {
 
     <div class="callout callout-warn">
       <span class="callout-icon">🚨</span>
-      <div><strong>If your shipment fails at EU customs:</strong> The container is quarantined, then destroyed at your cost. Your buyer loses their sale and claims damages. Your company is entered on the EU RAPEX alert system — visible to all EU importers. A $200 test prevents all of this.</div>
+      <div data-en="<strong>If your shipment fails at EU customs:</strong> The container is quarantined, then destroyed at your cost. Your buyer loses their sale and claims damages. Your company is entered on the EU RAPEX alert system — visible to all EU importers. A $200 test prevents all of this." data-ur="<strong>اگر آپ کی شپمنٹ یو ای کسٹم پر ناکام ہو:</strong> کنٹینر کو قرنطینہ کر دیا جاتا ہے، پھر آپ کی لاگت پر تباہ کر دیا جاتا ہے۔ آپ کا خریدار اپنی فروخت کھو دیتا ہے اور نقصانات کا دعویٰ کرتا ہے۔ آپ کی کمپنی کو یو ای ریپیکس الرٹ سسٹم میں درج کیا جاتا ہے — تمام یو ای امپورٹرز کے لیے visible۔ ایک $200 کا ٹیسٹ یہ سب روک سکتا ہے۔"><strong>If your shipment fails at EU customs:</strong> The container is quarantined, then destroyed at your cost. Your buyer loses their sale and claims damages. Your company is entered on the EU RAPEX alert system — visible to all EU importers. A $200 test prevents all of this.</div>
     </div>
 
-    <div class="ahmed-tip">
-      <div class="ahmed-tip-icon">💡</div>
-      <div class="ahmed-tip-body">
-        <strong>Ahmed's Example</strong>
-        <p>Ahmed sends one white fabric sample and one coloured border fabric sample to SGS Lahore before shipping 200 boxes of bed linen. Cost: $180. Test takes 7 days. Both pass. He attaches the certificates to his shipping documents. The container clears Hamburg customs without issue.</p>
+    <div class="ahmad-tip">
+      <div class="ahmad-tip-icon">💡</div>
+      <div class="ahmad-tip-body">
+        <strong data-en="Ahmad's Example" data-ur="احمد کی مثال">Ahmad's Example</strong>
+        <p data-en="Ahmad sends one white fabric sample and one coloured border fabric sample to SGS Lahore before shipping 200 boxes of bed linen. Cost: $180. Test takes 7 days. Both pass. He attaches the certificates to his shipping documents. The container clears Hamburg customs without issue." data-ur="احمد 200 بکس بیڈ لینن کی شپنگ سے پہلے ایک سفید فیبرک نمونہ اور ایک رنگین بارڈر فیبرک نمونہ ایس جی ایس لاہور بھیجتا ہے۔ لاگت: $180۔ ٹیسٹ 7 دن لیتا ہے۔ دونوں پاس ہوتے ہیں۔ وہ سرٹیفکیٹس اپنی شپنگ دستاویزات میں منسلک کرتا ہے۔ کنٹینر ہیمبرگ کسٹم پر بغیر کسی مسئلے کے کلیر ہو جاتا ہے۔">Ahmad sends one white fabric sample and one coloured border fabric sample to SGS Lahore before shipping 200 boxes of bed linen. Cost: $180. Test takes 7 days. Both pass. He attaches the certificates to his shipping documents. The container clears Hamburg customs without issue.</p>
       </div>
     </div>
 
     <div class="checklist" id="checklist-1">
-      <div class="check-divider">Pre-Shipment Testing</div>
+      <div class="check-divider" data-en="Pre-Shipment Testing" data-ur="پری-شپمنٹ ٹیسٹنگ">Pre-Shipment Testing</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I have sent fabric samples to an accredited lab at least 10 days before my planned ship date <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">Accredited labs in Pakistan: SGS (+92-42-111-747-474) · Bureau Veritas (+92-21-3241-4571) · Intertek (+92-21-3260-7100). Testing takes 5–10 working days.</div>
+          <div class="item-text" data-en="I have sent fabric samples to an accredited lab at least 10 days before my planned ship date <span class='item-tag tag-critical'>Critical</span>" data-ur="میں نے اپنے منصوبہ بند شپنگ کی تاریخ سے کم از کم 10 دن پہلے ایک تسلیم شدہ لیب کو فیبرک نمونے بھیجے ہیں <span class='item-tag tag-critical'>اہم</span>">I have sent fabric samples to an accredited lab at least 10 days before my planned ship date <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="Accredited labs in Pakistan: SGS (+92-42-111-747-474) · Bureau Veritas (+92-21-3241-4571) · Intertek (+92-21-3260-7100). Testing takes 5–10 working days." data-ur="پاکستان میں تسلیم شدہ لیبز: ایس جی ایس (+92-42-111-747-474) · بیورو ویریٹاس (+92-21-3241-4571) · انٹرٹیک (+92-21-3260-7100)۔ ٹیسٹنگ 5–10 کام کے دن لیتا ہے۔">Accredited labs in Pakistan: SGS (+92-42-111-747-474) · Bureau Veritas (+92-21-3241-4571) · Intertek (+92-21-3260-7100). Testing takes 5–10 working days.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I tested every distinct fabric type in this shipment separately</div>
-          <div class="item-detail">White fabric and coloured/printed fabric must be tested separately. Different dye batches = different test results. Do not assume one fabric type clears all.</div>
+          <div class="item-text" data-en="I tested every distinct fabric type in this shipment separately" data-ur="میں نے اس شپمنٹ میں ہر الگ فیبرک کی قسم کو الگ الگ ٹیسٹ کیا">I tested every distinct fabric type in this shipment separately</div>
+          <div class="item-detail" data-en="White fabric and coloured/printed fabric must be tested separately. Different dye batches = different test results. Do not assume one fabric type clears all." data-ur="سفید کپڑا اور رنگین/پرنٹ شدہ کپڑا الگ الگ ٹیسٹ ہونا چاہیے۔ مختلف رنگ بیچز = مختلف ٹیسٹ نتائج۔ ایک فیبرک کی قسم کے تمام کلیئر ہونے کا فرض نہ کریں۔">White fabric and coloured/printed fabric must be tested separately. Different dye batches = different test results. Do not assume one fabric type clears all.</div>
         </div>
       </div>
 
-      <div class="check-divider">What the Test Must Cover</div>
+      <div class="check-divider" data-en="What the Test Must Cover" data-ur="ٹیسٹ میں کیا شامل ہونا چاہیے">What the Test Must Cover</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My test certificate covers all 5 key substance groups <span class="item-tag tag-verify">Verify</span></div>
-          <div class="item-detail">Check your certificate covers: (1) Azo dyes / carcinogenic amines — BANNED · (2) Formaldehyde — 75 mg/kg children, 300 mg/kg adults · (3) Heavy metals: Lead, Cadmium, Chromium VI · (4) NPE (Nonylphenol Ethoxylates) — 25 mg/kg limit · (5) Phthalates in plastic accessories.</div>
+          <div class="item-text" data-en="My test certificate covers all 5 key substance groups <span class='item-tag tag-verify'>Verify</span>" data-ur="میرا ٹیسٹ سرٹیفکیٹ تمام 5 اہم مادہ گروپس کو کور کرتا ہے <span class='item-tag tag-verify'>تصدیق کریں</span>">My test certificate covers all 5 key substance groups <span class="item-tag tag-verify">Verify</span></div>
+          <div class="item-detail" data-en="Check your certificate covers: (1) Azo dyes / carcinogenic amines — BANNED · (2) Formaldehyde — 75 mg/kg children, 300 mg/kg adults · (3) Heavy metals: Lead, Cadmium, Chromium VI · (4) NPE (Nonylphenol Ethoxylates) — 25 mg/kg limit · (5) Phthalates in plastic accessories." data-ur="اپنے سرٹیفکیٹ کو چیک کریں کہ یہ ان کو کور کرتا ہے: (1) ایزو رنگ / سرطان پیدا کرنے والے امائنز — ممنوع · (2) فارمالڈیہائڈ — بچوں کے لیے 75 ملی گرام/کلو، بالغوں کے لیے 300 ملی گرام/کلو · (3) بھاری دھاتیں: سیسہ، کیڈمیئم، کرومیم VI · (4) این پی ای (نونائل فینول ایتھوکسیلیٹس) — 25 ملی گرام/کلو کی حد · (5) پلاسٹک ایکسیسریز میں فتالیتس۔">Check your certificate covers: (1) Azo dyes / carcinogenic amines — BANNED · (2) Formaldehyde — 75 mg/kg children, 300 mg/kg adults · (3) Heavy metals: Lead, Cadmium, Chromium VI · (4) NPE (Nonylphenol Ethoxylates) — 25 mg/kg limit · (5) Phthalates in plastic accessories.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My test certificate is less than 12 months old for this fabric type and dye batch</div>
-          <div class="item-detail">An old certificate from a previous order does not cover a new dye batch. If you changed dye supplier or dye formula, retest.</div>
+          <div class="item-text" data-en="My test certificate is less than 12 months old for this fabric type and dye batch" data-ur="میرا ٹیسٹ سرٹیفکیٹ اس فیبرک کی قسم اور رنگ بیچ کے لیے 12 ماہ سے کم پرانا ہے">My test certificate is less than 12 months old for this fabric type and dye batch</div>
+          <div class="item-detail" data-en="An old certificate from a previous order does not cover a new dye batch. If you changed dye supplier or dye formula, retest." data-ur="پچھلے آرڈر کا پرانا سرٹیفکیٹ نئے رنگ بیچ کو کور نہیں کرتا۔ اگر آپ نے رنگ سپلائر یا رنگ فارمولہ تبدیل کیا ہے، تو دوبارہ ٹیسٹ کریں۔">An old certificate from a previous order does not cover a new dye batch. If you changed dye supplier or dye formula, retest.</div>
         </div>
       </div>
 
-      <div class="check-divider">Documentation</div>
+      <div class="check-divider" data-en="Documentation" data-ur="دستاویزات">Documentation</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My test certificate shows a PASS conclusion — not just test values <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-text" data-en="My test certificate shows a PASS conclusion — not just test values <span class='item-tag tag-critical'>Critical</span>" data-ur="میرا ٹیسٹ سرٹیفکیٹ پاس کا نتیجہ دکھاتا ہے — صرف ٹیسٹ ویلیوز نہیں <span class='item-tag tag-critical'>اہم</span>">My test certificate shows a PASS conclusion — not just test values <span class="item-tag tag-critical">Critical</span></div>
           <div class="item-detail">The certificate conclusion section should say: "All tested parameters comply with applicable EU REACH restrictions." If it says FAIL or shows values above limits — do NOT ship. Contact your dye supplier immediately.</div>
         </div>
       </div>
@@ -1172,8 +1254,8 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I have included the test certificate PDF in the document pack sent to my buyer and freight forwarder</div>
-          <div class="item-detail">EU customs can request this at any time during clearance. Your buyer's customs agent needs it available immediately. Email the PDF before the shipment departs Karachi.</div>
+          <div class="item-text" data-en="I have included the test certificate PDF in the document pack sent to my buyer and freight forwarder" data-ur="میں نے ٹیسٹ سرٹیفکیٹ پی ڈی ایف کو اپنے خریدار اور فریٹ فارورڈر کو بھیجی گئی دستاویزات کے پیک میں شامل کیا ہے">I have included the test certificate PDF in the document pack sent to my buyer and freight forwarder</div>
+          <div class="item-detail" data-en="EU customs can request this at any time during clearance. Your buyer's customs agent needs it available immediately. Email the PDF before the shipment departs Karachi." data-ur="یو ای کسٹم کلیئرنس کے دوران اسے کسی بھی وقت طلب کر سکتا ہے۔ آپ کے خریدار کا کسٹم ایجنٹ اسے فوری طور پر دستیاب چاہتا ہے۔ شپمنٹ کے کراچی سے روانہ ہونے سے پہلے پی ڈی ایف ای میل کریں۔">EU customs can request this at any time during clearance. Your buyer's customs agent needs it available immediately. Email the PDF before the shipment departs Karachi.</div>
         </div>
       </div>
     </div>
@@ -1185,9 +1267,9 @@ body {
   <div class="section-card" id="section-2">
     <div class="card-header">
       <div class="card-header-left">
-        <div class="card-section-num">Section 3 of 5</div>
-        <h2>Product Labelling</h2>
-        <p>Every textile product sold in the EU must carry specific label information. Missing or incorrect labels mean your Hungarian buyer cannot legally sell your products at retail — resulting in returns or costly relabelling charges deducted from your payment.</p>
+        <div class="card-section-num" data-en="Section 3 of 5" data-ur="حصہ 3 از 5">Section 3 of 5</div>
+        <h2 data-en="Product Labelling" data-ur="پروڈکٹ لیبلنگ">Product Labelling</h2>
+        <p data-en="Every textile product sold in the EU must carry specific label information. Missing or incorrect labels mean your Hungarian buyer cannot legally sell your products at retail — resulting in returns or costly relabelling charges deducted from your payment." data-ur="یورپی یونین میں فروخت ہونے والا ہر ٹیکسٹائل پروڈکٹ مخصوص لیبل معلومات لازمی carry کرے۔ غائب یا غلط لیبلز کا مطلب ہے کہ آپ کا ہنگری خریدار آپ کی پروڈکٹس کو خوردہ فروخت میں قانونی طور پر نہیں بیچ سکتا — جس سے واپسی یا مہنگی ری لیبلنگ چارجز ہوتے ہیں جو آپ کی ادائیگی سے کٹتے ہیں۔">Every textile product sold in the EU must carry specific label information. Missing or incorrect labels mean your Hungarian buyer cannot legally sell your products at retail — resulting in returns or costly relabelling charges deducted from your payment.</p>
       </div>
       <div class="card-progress">
         <span class="card-pct" id="pct-2">0%</span>
@@ -1198,14 +1280,14 @@ body {
 
     <div class="callout callout-info">
       <span class="callout-icon">🇭🇺</span>
-      <div><strong>Selling to Hungary specifically:</strong> The physical product label must include Hungarian language text for retail sale. English-only labels are one of the most common causes of returns from Hungarian importers. Relabelling typically costs $0.20–$0.50 per unit — on 5,000 units, that is up to $2,500 deducted from your payment.</div>
+      <div data-en="<strong>Selling to Hungary specifically:</strong> The physical product label must include Hungarian language text for retail sale. English-only labels are one of the most common causes of returns from Hungarian importers. Relabelling typically costs $0.20–$0.50 per unit — on 5,000 units, that is up to $2,500 deducted from your payment." data-ur="<strong>خصوصی طور پر ہنگری کو بیچنا:</strong> جسمانی پروڈکٹ لیبل میں خوردہ فروخت کے لیے ہنگری زبان کا متن شامل ہونا چاہیے۔ صرف انگریزی لیبلز ہنگری امپورٹرز سے واپسی کی سب سے عام وجوہات میں سے ایک ہیں۔ ری لیبلنگ عام طور پر فی یونٹ $0.20–$0.50 کی لاگت آتی ہے — 5,000 یونٹس پر، یہ آپ کی ادائیگی سے $2,500 تک کٹ سکتی ہے۔"><strong>Selling to Hungary specifically:</strong> The physical product label must include Hungarian language text for retail sale. English-only labels are one of the most common causes of returns from Hungarian importers. Relabelling typically costs $0.20–$0.50 per unit — on 5,000 units, that is up to $2,500 deducted from your payment.</div>
     </div>
 
-    <div class="ahmed-tip">
-      <div class="ahmed-tip-icon">💡</div>
-      <div class="ahmed-tip-body">
-        <strong>Turn This Into a Competitive Advantage</strong>
-        <p>Send your Hungarian buyer a label PDF template for approval before you print labels at scale. Ask them to confirm the Hungarian translation. Most Pakistani suppliers don't offer this. Buyers notice — and they remember.</p>
+    <div class="ahmad-tip">
+      <div class="ahmad-tip-icon">💡</div>
+      <div class="ahmad-tip-body">
+        <strong data-en="Turn This Into a Competitive Advantage" data-ur="اسے مسابقتی فائدے میں تبدیل کریں">Turn This Into a Competitive Advantage</strong>
+        <p data-en="Send your Hungarian buyer a label PDF template for approval before you print labels at scale. Ask them to confirm the Hungarian translation. Most Pakistani suppliers don't offer this. Buyers notice — and they remember." data-ur="اپنے ہنگری خریدار کو لیبل پی ڈی ایف ٹیمپلیٹ منظوری کے لیے بھیجیں اس سے پہلے کہ آپ بڑے پیمانے پر لیبلز پرنٹ کریں۔ ان سے ہنگری ترجمے کی تصدیق کرنے کو کہیں۔ زیادہ تر پاکستانی سپلائرز یہ پیشکش نہیں کرتے۔ خریدار نوٹس کرتے ہیں — اور وہ یاد رکھتے ہیں۔">Send your Hungarian buyer a label PDF template for approval before you print labels at scale. Ask them to confirm the Hungarian translation. Most Pakistani suppliers don't offer this. Buyers notice — and they remember.</p>
       </div>
     </div>
 
@@ -1214,7 +1296,7 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My label shows exact fibre composition as percentages <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-text" data-en="My label shows exact fibre composition as percentages <span class='item-tag tag-critical'>Critical</span>" data-ur="میرا لیبل فیصد کے طور پر درست فائبر کمپوزیشن دکھاتا ہے <span class='item-tag tag-critical'>اہم</span>">My label shows exact fibre composition as percentages <span class="item-tag tag-critical">Critical</span></div>
           <div class="item-detail">Must be exact: "100% Cotton" or "60% Cotton, 40% Polyester." Not "60/40 cotton poly." Not rounded figures. Every fibre component must be listed. If the filling and cover of a cushion differ, both must be stated.</div>
         </div>
       </div>
@@ -1230,7 +1312,7 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My label uses standard ISO care symbols — not text-only care instructions</div>
+          <div class="item-text" data-en="My label uses standard ISO care symbols — not text-only care instructions" data-ur="میرا لیبل معیاری آئی ایس او کیئر سمبلز استعمال کرتا ہے — صرف متن والے کیئر ہدایات نہیں">My label uses standard ISO care symbols — not text-only care instructions</div>
           <div class="item-detail">The washing machine symbol, iron symbol, bleach triangle, tumble dry symbol etc. are required. Text instructions alone ("machine wash at 40°C") are not sufficient under EU rules. ISO 3758 symbols must be present.</div>
         </div>
       </div>
@@ -1238,7 +1320,7 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">For Hungary: I have provided a Hungarian-language label template to my buyer for approval <span class="item-tag tag-action">Action</span></div>
+          <div class="item-text" data-en="For Hungary: I have provided a Hungarian-language label template to my buyer for approval <span class='item-tag tag-action'>Action</span>" data-ur="ہنگری کے لیے: میں نے اپنے خریدار کو منظوری کے لیے ہنگری زبان کا لیبل ٹیمپلیٹ فراہم کیا ہے <span class='item-tag tag-action'>عمل</span>">For Hungary: I have provided a Hungarian-language label template to my buyer for approval <span class="item-tag tag-action">Action</span></div>
           <div class="item-detail">Key Hungarian terms: "100% Pamut" (100% Cotton) · "Gyártva: Pakisztán" (Made in Pakistan) · "60°C-on mosható" (machine wash 60°C). A freelance translator on Fiverr translates a label for $10–$20. Do this once, reuse the template.</div>
         </div>
       </div>
@@ -1246,8 +1328,8 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My label template has been approved by my buyer before large-scale label printing</div>
-          <div class="item-detail">Send a PDF of the exact label design before you print thousands of labels. Catching an error at proof stage costs nothing. Reprinting 10,000 labels after production costs real money and causes delays.</div>
+          <div class="item-text" data-en="My label template has been approved by my buyer before large-scale label printing" data-ur="میرا لیبل ٹیمپلیٹ بڑے پیمانے پر لیبل پرنٹنگ سے پہلے میرے خریدار کی طرف سے منظور ہو چکا ہے">My label template has been approved by my buyer before large-scale label printing</div>
+          <div class="item-detail" data-en="Send a PDF of the exact label design before you print thousands of labels. Catching an error at proof stage costs nothing. Reprinting 10,000 labels after production costs real money and causes delays." data-ur="ہزاروں لیبلز پرنٹ کرنے سے پہلے درست لیبل ڈیزائن کا پی ڈی ایف بھیجیں۔ پروف سٹیج پر غلطی پکڑنے کی کوئی لاگت نہیں۔ پروڈکشن کے بعد 10,000 لیبلز دوبارہ پرنٹ کرنے میں اصلی پیسے لگتے ہیں اور تاخیر ہوتی ہے۔">Send a PDF of the exact label design before you print thousands of labels. Catching an error at proof stage costs nothing. Reprinting 10,000 labels after production costs real money and causes delays.</div>
         </div>
       </div>
     </div>
@@ -1259,9 +1341,9 @@ body {
   <div class="section-card" id="section-3">
     <div class="card-header">
       <div class="card-header-left">
-        <div class="card-section-num">Section 4 of 5</div>
-        <h2>Shipment Documents</h2>
-        <p>Every Pakistan → EU textile shipment requires a specific set of documents. A single missing or mismatched document can hold your container at Hamburg or Rotterdam for days — your buyer misses their sale, and you bear the cost.</p>
+        <div class="card-section-num" data-en="Section 4 of 5" data-ur="حصہ 4 از 5">Section 4 of 5</div>
+        <h2 data-en="Shipment Documents" data-ur="شپمنٹ دستاویزات">Shipment Documents</h2>
+        <p data-en="Every Pakistan → EU textile shipment requires a specific set of documents. A single missing or mismatched document can hold your container at Hamburg or Rotterdam for days — your buyer misses their sale, and you bear the cost." data-ur="پاکستان سے یورپی یونین کی ہر ٹیکسٹائل شپمنٹ کے لیے مخصوص دستاویزات کا ایک سیٹ درکار ہے۔ ایک بھی غائب یا غلط دستاویز آپ کے کنٹینر کو ہیمبرگ یا روٹterdam میں دنوں تک روک سکتی ہے — آپ کا خریدار اپنی فروخت کھو دیتا ہے، اور آپ لاگت برداشت کرتے ہیں۔">Every Pakistan → EU textile shipment requires a specific set of documents. A single missing or mismatched document can hold your container at Hamburg or Rotterdam for days — your buyer misses their sale, and you bear the cost.</p>
       </div>
       <div class="card-progress">
         <span class="card-pct" id="pct-3">0%</span>
@@ -1272,59 +1354,59 @@ body {
 
     <div class="callout callout-info">
       <span class="callout-icon">🚢</span>
-      <div><strong>Important for Hungary-bound shipments:</strong> Hungary is in the EU Customs Union. Your container does not clear customs in Budapest — it clears at the first EU port of entry: Hamburg, Rotterdam, or Koper. Your buyer's customs agent there handles clearance. If documents are wrong, the delay happens in Germany or the Netherlands, not Hungary.</div>
+      <div data-en="<strong>Important for Hungary-bound shipments:</strong> Hungary is in the EU Customs Union. Your container does not clear customs in Budapest — it clears at the first EU port of entry: Hamburg, Rotterdam, or Koper. Your buyer's customs agent there handles clearance. If documents are wrong, the delay happens in Germany or the Netherlands, not Hungary." data-ur="<strong>ہنگری جانے والی شپمنٹس کے لیے اہم:</strong> ہنگری یو ای کسٹم یونین میں ہے۔ آپ کا کنٹینر بڈاپسٹ میں کسٹم کلیر نہیں ہوتا — یہ پہلے یو ای پورٹ آف انٹری پر کلیر ہوتا ہے: ہیمبرگ، روٹterdam، یا کوپر۔ آپ کے خریدار کا کسٹم ایجنٹ وہاں کلیئرنس ہینڈل کرتا ہے۔ اگر دستاویزات غلط ہوں، تاخیر جرمنی یا نیدرلینڈز میں ہوتی ہے، ہنگری میں نہیں۔"><strong>Important for Hungary-bound shipments:</strong> Hungary is in the EU Customs Union. Your container does not clear customs in Budapest — it clears at the first EU port of entry: Hamburg, Rotterdam, or Koper. Your buyer's customs agent there handles clearance. If documents are wrong, the delay happens in Germany or the Netherlands, not Hungary.</div>
     </div>
 
     <div class="checklist" id="checklist-3">
-      <div class="check-divider">Core Shipping Documents</div>
+      <div class="check-divider" data-en="Core Shipping Documents" data-ur="بنیادی شپنگ دستاویزات">Core Shipping Documents</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">Commercial invoice is complete: correct HS codes, full company names, actual transaction value <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">Do not undervalue the invoice to reduce duties — EU customs has price databases and will challenge suspicious valuations. Undervaluation is a legal risk for both you and your buyer. Declare the real price.</div>
+          <div class="item-text" data-en="Commercial invoice is complete: correct HS codes, full company names, actual transaction value <span class='item-tag tag-critical'>Critical</span>" data-ur="کمرشل انوائس مکمل ہے: درست ایچ ایس کوڈز، مکمل کمپنی کے نام، اصل لین دین کی قیمت <span class='item-tag tag-critical'>اہم</span>">Commercial invoice is complete: correct HS codes, full company names, actual transaction value <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="Do not undervalue the invoice to reduce duties — EU customs has price databases and will challenge suspicious valuations. Undervaluation is a legal risk for both you and your buyer. Declare the real price." data-ur="ڈیوٹی کم کرنے کے لیے انوائس کی قیمت کم نہ بتائیں — یو ای کسٹم کے پاس قیمت ڈیٹا بیس ہیں اور وہ مشکوک ویلیو ایشنز کو چیلنج کرے گا۔ انڈر ویلیو ایشن آپ اور آپ کے خریدار دونوں کے لیے قانونی خطرہ ہے۔ اصلی قیمت کا اعلان کریں۔">Do not undervalue the invoice to reduce duties — EU customs has price databases and will challenge suspicious valuations. Undervaluation is a legal risk for both you and your buyer. Declare the real price.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">Packing list totals match the invoice exactly — same quantities, same HS codes</div>
-          <div class="item-detail">Invoice: 500 units HS 6302. Packing list: 500 units HS 6302. Bill of lading: 500 units HS 6302. All three must agree. Any mismatch is an automatic customs flag.</div>
+          <div class="item-text" data-en="Packing list totals match the invoice exactly — same quantities, same HS codes" data-ur="پیکنگ لسٹ کے ٹوٹل بالکل انوائس سے مماثل ہیں — وہی مقدار، وہی ایچ ایس کوڈز">Packing list totals match the invoice exactly — same quantities, same HS codes</div>
+          <div class="item-detail" data-en="Invoice: 500 units HS 6302. Packing list: 500 units HS 6302. Bill of lading: 500 units HS 6302. All three must agree. Any mismatch is an automatic customs flag." data-ur="انوائس: 500 یونٹس ایچ ایس 6302۔ پیکنگ لسٹ: 500 یونٹس ایچ ایس 6302۔ بل آف لیڈنگ: 500 یونٹس ایچ ایس 6302۔ تینوں لازمی اتفاق رکھیں۔ کوئی بھی عدم مماثلت خودکار کسٹم فلیگ ہے۔">Invoice: 500 units HS 6302. Packing list: 500 units HS 6302. Bill of lading: 500 units HS 6302. All three must agree. Any mismatch is an automatic customs flag.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">Bill of lading or airway bill is issued and shows the correct port of discharge</div>
+          <div class="item-text" data-en="Bill of lading or airway bill is issued and shows the correct port of discharge" data-ur="بل آف لیڈنگ یا ایئر وے بل جاری کیا گیا ہے اور درست پورٹ آف ڈسچارج دکھاتا ہے">Bill of lading or airway bill is issued and shows the correct port of discharge</div>
           <div class="item-detail">Sea freight: port of discharge should be Hamburg (Germany), Rotterdam (Netherlands), or Koper (Slovenia) — not "Budapest." Goods travel by truck from the EU port to Hungary after customs clearance.</div>
         </div>
       </div>
 
-      <div class="check-divider">Compliance Documents</div>
+      <div class="check-divider" data-en="Compliance Documents" data-ur="کمپلائنس دستاویزات">Compliance Documents</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">GSP+ origin declaration (REX on invoice) or Form A certificate is included <span class="item-tag tag-critical">Critical</span></div>
-          <div class="item-detail">This is the document that triggers the zero tariff. Without it, your buyer pays full MFN duty (9–12% for garments). This document is your financial responsibility to provide correctly.</div>
+          <div class="item-text" data-en="GSP+ origin declaration (REX on invoice) or Form A certificate is included <span class='item-tag tag-critical'>Critical</span>" data-ur="جی ایس پی پلس اصلیت کا اعلان (انوائس پر ریکس) یا فارم اے سرٹیفکیٹ شامل ہے <span class='item-tag tag-critical'>اہم</span>">GSP+ origin declaration (REX on invoice) or Form A certificate is included <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail" data-en="This is the document that triggers the zero tariff. Without it, your buyer pays full MFN duty (9–12% for garments). This document is your financial responsibility to provide correctly." data-ur="یہ وہ دستاویز ہے جو زیرو ٹیرف کو متحرک کرتی ہے۔ اس کے بغیر، آپ کا خریدار پورا ایم ایف این ڈیوٹی (پوشاک کے لیے 9–12%) ادا کرتا ہے۔ یہ دستاویز درست فراہم کرنے کی آپ کی مالی ذمہ داری ہے۔">This is the document that triggers the zero tariff. Without it, your buyer pays full MFN duty (9–12% for garments). This document is your financial responsibility to provide correctly.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">REACH test certificate (from SGS, BV, or Intertek) is included in the document pack</div>
-          <div class="item-detail">The certificate must cover all fabric types in this shipment and be less than 12 months old. Send the PDF to your buyer and freight forwarder before the vessel departs Karachi.</div>
+          <div class="item-text" data-en="REACH test certificate (from SGS, BV, or Intertek) is included in the document pack" data-ur="ریچ ٹیسٹ سرٹیفکیٹ (ایس جی ایس، بی وی، یا انٹرٹیک سے) دستاویزات کے پیک میں شامل ہے">REACH test certificate (from SGS, BV, or Intertek) is included in the document pack</div>
+          <div class="item-detail" data-en="The certificate must cover all fabric types in this shipment and be less than 12 months old. Send the PDF to your buyer and freight forwarder before the vessel departs Karachi." data-ur="سرٹیفکیٹ لازمی اس شپمنٹ میں تمام فیبرک کی اقسام کو کور کرے اور 12 ماہ سے کم پرانا ہو۔ جہاز کے کراچی سے روانہ ہونے سے پہلے پی ڈی ایف اپنے خریدار اور فریٹ فارورڈر کو بھیجیں۔">The certificate must cover all fabric types in this shipment and be less than 12 months old. Send the PDF to your buyer and freight forwarder before the vessel departs Karachi.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I have cross-checked all documents against each other before sending to the freight forwarder</div>
-          <div class="item-detail">Final cross-check: do the invoice HS codes, quantities, and unit prices all match the packing list? Does the bill of lading match both? Five minutes of checking here prevents days of customs delays.</div>
+          <div class="item-text" data-en="I have cross-checked all documents against each other before sending to the freight forwarder" data-ur="میں نے فریٹ فارورڈر کو بھیجنے سے پہلے تمام دستاویزات کو ایک دوسرے کے خلاف کراس چیک کیا ہے">I have cross-checked all documents against each other before sending to the freight forwarder</div>
+          <div class="item-detail" data-en="Final cross-check: do the invoice HS codes, quantities, and unit prices all match the packing list? Does the bill of lading match both? Five minutes of checking here prevents days of customs delays." data-ur="آخری کراس چیک: کیا انوائس ایچ ایس کوڈز، مقدار، اور یونٹ قیمتیں پیکنگ لسٹ سے مماثل ہیں؟ کیا بل آف لیڈنگ دونوں سے مماثل ہے؟ یہاں پانچ منٹ کی جانچ دنوں کی کسٹم تاخیر کو روکتی ہے۔">Final cross-check: do the invoice HS codes, quantities, and unit prices all match the packing list? Does the bill of lading match both? Five minutes of checking here prevents days of customs delays.</div>
         </div>
       </div>
     </div>
@@ -1336,9 +1418,9 @@ body {
   <div class="section-card" id="section-4">
     <div class="card-header">
       <div class="card-header-left">
-        <div class="card-section-num">Section 5 of 5</div>
+        <div class="card-section-num" data-en="Section 5 of 5" data-ur="حصہ 5 از 5">Section 5 of 5</div>
         <h2>Sustainability & Factory Profile</h2>
-        <p>Large EU fashion brands and retailers must report on their supply chains under EU sustainability rules. This means they will ask you — their Pakistani supplier — for information about your factory. Being ready to answer wins contracts.</p>
+        <p data-en="Large EU fashion brands and retailers must report on their supply chains under EU sustainability rules. This means they will ask you — their Pakistani supplier — for information about your factory. Being ready to answer wins contracts." data-ur="بڑی یو ای فیشن برانڈز اور خوردہ فروشوں کو یو ای پائیداری قواعد کے تحت اپنی سپلائی چینز کی رپورٹ دینی ہوتی ہے۔ اس کا مطلب ہے کہ وہ آپ — اپنے پاکستانی سپلائر — سے آپ کی فیکٹری کے بارے میں معلومات مانگیں گے۔ جواب دینے کے لیے تیار رہنا معاہدے جیتتا ہے۔">Large EU fashion brands and retailers must report on their supply chains under EU sustainability rules. This means they will ask you — their Pakistani supplier — for information about your factory. Being ready to answer wins contracts.</p>
       </div>
       <div class="card-progress">
         <span class="card-pct" id="pct-4">0%</span>
@@ -1349,24 +1431,24 @@ body {
 
     <div class="callout callout-info">
       <span class="callout-icon">📋</span>
-      <div><strong>Does the EU CSRD apply to Ahmed's factory directly?</strong> No. The EU Corporate Sustainability Reporting Directive (simplified December 2025) now applies only to companies with more than 1,000 employees and more than €450M turnover. Ahmed's factory is not directly obligated. But Ahmed's EU buyers ARE — and they will ask Ahmed for data.</div>
+      <div data-en="<strong>Does the EU CSRD apply to Ahmad's factory directly?</strong> No. The EU Corporate Sustainability Reporting Directive (simplified December 2025) now applies only to companies with more than 1,000 employees and more than €450M turnover. Ahmad's factory is not directly obligated. But Ahmad's EU buyers ARE — and they will ask Ahmad for data." data-ur="<strong>کیا یو ای سی ایس آر ڈی براہ راست احمد کی فیکٹری پر لاگو ہوتا ہے؟</strong> نہیں۔ یو ای کارپوریٹ پائیداری رپورٹنگ ڈائریکٹیو (سادہ دسمبر 2025) اب صرف 1,000 سے زیادہ ملازمین اور €450M سے زیادہ ٹرن اوور والی کمپنیوں پر لاگو ہوتا ہے۔ احمد کی فیکٹری براہ راست پابند نہیں ہے۔ لیکن احمد کے یو ای خریدار ہیں — اور وہ احمد سے ڈیٹا مانگیں گے۔"><strong>Does the EU CSRD apply to Ahmad's factory directly?</strong> No. The EU Corporate Sustainability Reporting Directive (simplified December 2025) now applies only to companies with more than 1,000 employees and more than €450M turnover. Ahmad's factory is not directly obligated. But Ahmad's EU buyers ARE — and they will ask Ahmad for data.</div>
     </div>
 
-    <div class="ahmed-tip">
-      <div class="ahmed-tip-icon">💡</div>
-      <div class="ahmed-tip-body">
-        <strong>Ahmed's Tip</strong>
-        <p>Ahmed sends a one-page factory profile with every new buyer enquiry — before they even ask. It includes worker numbers, wages vs minimum wage, his no-child-labour policy, and his SMETA audit date. Buyers who receive this immediately rank him above suppliers who cannot answer basic questions.</p>
+    <div class="ahmad-tip">
+      <div class="ahmad-tip-icon">💡</div>
+      <div class="ahmad-tip-body">
+        <strong data-en="Ahmad's Tip" data-ur="احمد کا مشورہ">Ahmad's Tip</strong>
+        <p data-en="Ahmad sends a one-page factory profile with every new buyer enquiry — before they even ask. It includes worker numbers, wages vs minimum wage, his no-child-labour policy, and his SMETA audit date. Buyers who receive this immediately rank him above suppliers who cannot answer basic questions." data-ur="احمد ہر نئے خریدار کی درخواست کے ساتھ ایک صفحے کا فیکٹری پروفائل بھیجتا ہے — اس سے پہلے کہ وہ even پوچھیں۔ اس میں ورکرز کی تعداد، اجرت بمقابلہ کم از کم اجرت، اس کی نو بال مزدوری پالیسی، اور اس کی سمیٹا آڈٹ کی تاریخ شامل ہے۔ جو خریدار یہ وصول کرتے ہیں وہ فوری طور پر اسے بنیادی سوالات کا جواب نہ دے سکنے والے سپلائرز سے اوپر درجہ دیتے ہیں۔">Ahmad sends a one-page factory profile with every new buyer enquiry — before they even ask. It includes worker numbers, wages vs minimum wage, his no-child-labour policy, and his SMETA audit date. Buyers who receive this immediately rank him above suppliers who cannot answer basic questions.</p>
       </div>
     </div>
 
     <div class="checklist" id="checklist-4">
-      <div class="check-divider">Factory Profile Document</div>
+      <div class="check-divider" data-en="Factory Profile Document" data-ur="فیکٹری پروفائل دستاویز">Factory Profile Document</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I have a one-page factory profile document ready to email to any new buyer <span class="item-tag tag-action">Action</span></div>
+          <div class="item-text" data-en="I have a one-page factory profile document ready to email to any new buyer <span class='item-tag tag-action'>Action</span>" data-ur="میرے پاس کسی بھی نئے خریدار کو ای میل کرنے کے لیے ایک صفحے کا فیکٹری پروفائل دستاویز تیار ہے <span class='item-tag tag-action'>عمل</span>">I have a one-page factory profile document ready to email to any new buyer <span class="item-tag tag-action">Action</span></div>
           <div class="item-detail">Must include: total workers, % women workers, average wage vs Pakistani minimum wage, working hours policy, child labour policy (written), health & safety basics, and any certifications held.</div>
         </div>
       </div>
@@ -1374,43 +1456,43 @@ body {
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">My factory profile includes a written child labour policy and minimum age verification process</div>
+          <div class="item-text" data-en="My factory profile includes a written child labour policy and minimum age verification process" data-ur="میرے فیکٹری پروفائل میں تحریری بچوں کی مزدوری پالیسی اور کم از کم عمر کی تصدیق کا عمل شامل ہے">My factory profile includes a written child labour policy and minimum age verification process</div>
           <div class="item-detail">EU buyers will not work with suppliers who cannot demonstrate a written policy. A simple one-paragraph statement saying "We do not employ anyone under 18 and verify age at hiring" is sufficient to start.</div>
         </div>
       </div>
 
-      <div class="check-divider">Social Compliance Certification</div>
+      <div class="check-divider" data-en="Social Compliance Certification" data-ur="سماجی تعمیل سرٹیفیکیشن">Social Compliance Certification</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I have, or am actively planning, a SMETA social compliance audit</div>
-          <div class="item-detail">SMETA (Sedex Members Ethical Trade Audit) is the most widely requested audit by EU fashion and retail buyers. Cost: approximately $600–$1,200. Conducted by SGS, Bureau Veritas, or Intertek. Valid 1–2 years. Register on sedexglobal.com.</div>
+          <div class="item-text" data-en="I have, or am actively planning, a SMETA social compliance audit" data-ur="میرے پاس ہے، یا میں فعال طور پر منصوبہ بندی کر رہا ہوں، ایک سمیٹا سماجی تعمیل آڈٹ">I have, or am actively planning, a SMETA social compliance audit</div>
+          <div class="item-detail" data-en="SMETA (Sedex Members Ethical Trade Audit) is the most widely requested audit by EU fashion and retail buyers. Cost: approximately $600–$1,200. Conducted by SGS, Bureau Veritas, or Intertek. Valid 1–2 years. Register on sedexglobal.com." data-ur="سمیٹا (سیڈیکس ممبرز ایتھیکل ٹریڈ آڈٹ) یو ای فیشن اور خوردہ خریداروں کی طرف سے سب سے زیادہ درخواست کردہ آڈٹ ہے۔ لاگت: تقریباً $600–$1,200۔ ایس جی ایس، بیورو ویریٹاس، یا انٹرٹیک کے ذریعے انجام دیا جاتا ہے۔ 1–2 سال کے لیے درست۔ sedexglobal.com پر رجسٹر کریں۔">SMETA (Sedex Members Ethical Trade Audit) is the most widely requested audit by EU fashion and retail buyers. Cost: approximately $600–$1,200. Conducted by SGS, Bureau Veritas, or Intertek. Valid 1–2 years. Register on sedexglobal.com.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I keep records of my material inputs — yarn suppliers, fabric suppliers, dye suppliers, countries of origin</div>
-          <div class="item-detail">The EU Digital Product Passport for textiles is coming (~2027–2028). It will require a QR code on every product linking to material and production data. Start recording this now — building it retroactively is very difficult.</div>
+          <div class="item-text" data-en="I keep records of my material inputs — yarn suppliers, fabric suppliers, dye suppliers, countries of origin" data-ur="میں اپنے مٹیریل ان پٹس کے ریکارڈز رکھتا ہوں — سوت سپلائرز، کپڑا سپلائرز، رنگ سپلائرز، اصلیت کے ممالک">I keep records of my material inputs — yarn suppliers, fabric suppliers, dye suppliers, countries of origin</div>
+          <div class="item-detail" data-en="The EU Digital Product Passport for textiles is coming (~2027–2028). It will require a QR code on every product linking to material and production data. Start recording this now — building it retroactively is very difficult." data-ur="ٹیکسٹائل کے لیے یو ای ڈیجیٹل پروڈکٹ پاسپورٹ آ رہا ہے (~2027–2028)۔ ہر پروڈکٹ پر مٹیریل اور پروڈکشن ڈیٹا سے منسلک کیو آر کوڈ درکار ہوگا۔ ابھی سے اسے ریکارڈ کرنا شروع کریں — ریٹرو ایکٹیو طور پر اسے بنانا بہت مشکل ہے۔">The EU Digital Product Passport for textiles is coming (~2027–2028). It will require a QR code on every product linking to material and production data. Start recording this now — building it retroactively is very difficult.</div>
         </div>
       </div>
 
-      <div class="check-divider">Coming Soon — Digital Product Passport</div>
+      <div class="check-divider" data-en="Coming Soon — Digital Product Passport" data-ur="جلد آ رہا ہے — ڈیجیٹل پروڈکٹ پاسپورٹ">Coming Soon — Digital Product Passport</div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I am aware the EU Digital Product Passport is coming (~2027–2028) and I am keeping production records now <span class="item-tag tag-action">Coming Soon</span></div>
-          <div class="item-detail">Not required yet. But factories that can provide full material traceability data when it becomes mandatory will have a significant competitive advantage over those who cannot.</div>
+          <div class="item-text" data-en="I am aware the EU Digital Product Passport is coming (~2027–2028) and I am keeping production records now <span class='item-tag tag-action'>Coming Soon</span>" data-ur="میں جانتا ہوں کہ یو ای ڈیجیٹل پروڈکٹ پاسپورٹ آ رہا ہے (~2027–2028) اور میں ابھی پروڈکشن ریکارڈز رکھ رہا ہوں <span class='item-tag tag-action'>جلد آ رہا ہے</span>">I am aware the EU Digital Product Passport is coming (~2027–2028) and I am keeping production records now <span class="item-tag tag-action">Coming Soon</span></div>
+          <div class="item-detail" data-en="Not required yet. But factories that can provide full material traceability data when it becomes mandatory will have a significant competitive advantage over those who cannot." data-ur="ابھی تک لازمی نہیں ہے۔ لیکن وہ فیکٹریاں جو اسے لازمی ہونے پر مکمل مٹیریل ٹریسیبلٹی ڈیٹا فراہم کر سکتی ہیں ان کے لیے جو نہیں کر سکتے ان پر نمایاں مسابقتی فائدہ ہوگا۔">Not required yet. But factories that can provide full material traceability data when it becomes mandatory will have a significant competitive advantage over those who cannot.</div>
         </div>
       </div>
 
       <div class="check-item" onclick="toggleItem(this)">
         <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
         <div class="item-body">
-          <div class="item-text">I understand that CSRD does not apply directly to my factory but does affect what my EU buyers will ask me</div>
+          <div class="item-text" data-en="I understand that CSRD does not apply directly to my factory but does affect what my EU buyers will ask me" data-ur="میں سمجھتا ہوں کہ سی ایس آر ڈی براہ راست میری فیکٹری پر لاگو نہیں ہوتا لیکن یہ اسے متاثر کرتا ہے جو میرے یو ای خریدار مجھ سے پوچھیں گے">I understand that CSRD does not apply directly to my factory but does affect what my EU buyers will ask me</div>
           <div class="item-detail">Large EU retailers (Zara, H&M, Primark, major Hungarian chains) must report on their supply chains. They will pass these questions to you. Having your factory profile ready means you are never caught off guard by a buyer's sustainability questionnaire.</div>
         </div>
       </div>
@@ -1423,8 +1505,8 @@ body {
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <strong>EU Export Compliance Checker</strong>
-      <p>A free practical tool for Pakistani textile exporters navigating EU market access. Built on current 2025–2026 EU regulations including GSP+ rules, REACH restrictions, EU Textile Labelling Regulation, and post-Omnibus I sustainability requirements.</p>
+      <strong data-en="EU Export Compliance Checker" data-ur="یو ای ایکسپورٹ کمپلائنس چیکر">EU Export Compliance Checker</strong>
+      <p data-en="A free practical tool for Pakistani textile exporters navigating EU market access. Built on current 2025–2026 EU regulations including GSP+ rules, REACH restrictions, EU Textile Labelling Regulation, and post-Omnibus I sustainability requirements." data-ur="یورپی یونین مارکیٹ رسائی میں پاکستانی ٹیکسٹائل ایکسپورٹرز کے لیے ایک مفت عملی ٹول۔ موجودہ 2025–2026 یو ای ریگولیشنز پر مبنی بشمول جی ایس پی پلس قواعد، ریچ پابندیاں، یو ای ٹیکسٹائل لیبلنگ ریگولیشن، اور پوسٹ اومنی بس I پائیداری تقاضے۔">A free practical tool for Pakistani textile exporters navigating EU market access. Built on current 2025–2026 EU regulations including GSP+ rules, REACH restrictions, EU Textile Labelling Regulation, and post-Omnibus I sustainability requirements.</p>
       <a href="https://www.linkedin.com/in/ahmad-ali-2b6358231" target="_blank" class="footer-author">
         <div class="author-avatar">AA</div>
         <div class="author-info">
@@ -1435,32 +1517,32 @@ body {
     </div>
 
     <div class="footer-col">
-      <h4>Key Contacts</h4>
+      <h4 data-en="Key Contacts" data-ur="اہم رابطے">Key Contacts</h4>
       <a href="https://tdap.gov.pk" target="_blank">TDAP Pakistan</a>
       <a href="mailto:sgspakistan@sgs.com">SGS Pakistan</a>
       <a href="mailto:bvpakistan@bureauveritas.com">Bureau Veritas Pakistan</a>
       <a href="mailto:pakistan@intertek.com">Intertek Pakistan</a>
-      <a href="#">Embassy of Pakistan, Budapest</a>
+      <a href="#" data-en="Embassy of Pakistan, Budapest" data-ur="ایمبیسی آف پاکستان، بڈاپسٹ">Embassy of Pakistan, Budapest</a>
     </div>
 
     <div class="footer-col">
-      <h4>Key Resources</h4>
+      <h4 data-en="Key Resources" data-ur="اہم وسائل">Key Resources</h4>
       <a href="https://tdap.gov.pk" target="_blank">tdap.gov.pk</a>
-      <a href="https://ec.europa.eu/taxation_customs" target="_blank">EU TARIC / Tariff Database</a>
-      <a href="https://echa.europa.eu" target="_blank">REACH Substance Lists</a>
-      <a href="https://sedexglobal.com" target="_blank">Sedex / SMETA Platform</a>
+      <a href="https://ec.europa.eu/taxation_customs" target="_blank" data-en="EU TARIC / Tariff Database" data-ur="یو ای ٹاریک / ٹیرف ڈیٹا بیس">EU TARIC / Tariff Database</a>
+      <a href="https://echa.europa.eu" target="_blank" data-en="REACH Substance Lists" data-ur="ریچ مادہ فہرستیں">REACH Substance Lists</a>
+      <a href="https://sedexglobal.com" target="_blank" data-en="Sedex / SMETA Platform" data-ur="سیڈیکس / سمیٹا پلیٹ فارم">Sedex / SMETA Platform</a>
       <a href="https://europa.eu/trade" target="_blank">EU Trade & GSP Info</a>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest · 2026</span>
+    <span><span data-en="Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest" data-ur="ایمبیسی آف پاکستان، بڈاپسٹ کے کمرشل ونگ کے تعاون سے تیار کردہ">Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest</span> · 2026</span>
     <div style="display:flex;align-items:center;gap:16px;">
       <span class="update-badge">
         <span class="update-dot"></span>
-        Current as of 2026 · Review annually
+        <span data-en="Current as of 2026 · Review annually" data-ur="2026 تک جاری · سالانہ جائزہ">Current as of 2026 · Review annually</span>
       </span>
-      <span>Free to use and share</span>
+      <span data-en="Free to use and share" data-ur="استعمال اور شیئر کرنے کے لیے مفت">Free to use and share</span>
     </div>
   </div>
 </footer>
@@ -1470,8 +1552,115 @@ body {
 const TOTAL_ITEMS = 31;
 const sectionCounts = [8, 6, 5, 6, 6];
 let allSectionsVisible = false;
+let currentLang = 'en';
 
 const STORAGE_KEY = 'eu_compliance_checker_v1';
+const LANG_KEY = 'eu_compliance_lang';
+
+// ── Translation Data ──────────────────────────────────────
+const translations = {
+  en: {
+    pageTitle: "EU Export Compliance Checker — Pakistani Textile Exporters",
+    progressLabel: "Overall Readiness",
+    progressStatus: "{checked} of {total} items checked",
+    saveIndicator: "💾 Auto-saved",
+    criticalText: "{count} critical {plural} unchecked — address these before shipping",
+    criticalTextAllClear: "✓ All critical items checked — your shipment passes the key compliance gates",
+    criticalJump: "Show me →",
+    toast: "✓ Link copied — share with your freight forwarder or buying agent",
+    resetConfirm: "Reset all checkboxes? Your progress will be cleared.",
+    band100: "Shipment Ready — All 31 Items Checked",
+    band100Desc: "Your shipment documentation should be in order. Final reminder: confirm your REACH certificate is less than 12 months old and your REX declaration is word-for-word correct on your commercial invoice.",
+    band71: "Almost Ready — {remaining} Items Remaining",
+    band71Desc: "You are {pct}% compliant. {criticalMsg} Complete the remaining items and you are ready to ship.",
+    band41: "Partially Ready — Significant Gaps Remain",
+    band41Desc: "You are {pct}% through the checklist. {criticalMsg} Complete all sections before your cargo is loaded.",
+    band0: "Not Ready to Ship — Critical Gaps Identified",
+    band0Desc: "You are only {pct}% through compliance checks. {criticalMsg} Shipping without completing these checks risks your container being rejected at Hamburg or Rotterdam, your buyer being billed the full tariff, and your shipment being destroyed at your cost."
+  },
+  ur: {
+    pageTitle: "یو ای ایکسپورٹ کمپلائنس چیکر — پاکستانی ٹیکسٹائل ایکسپورٹرز",
+    progressLabel: "مجموعی تیاری",
+    progressStatus: "{total} میں سے {checked} آئٹمز چیک کیے گئے",
+    saveIndicator: "💾 خود بخود محفوظ",
+    criticalText: "{count} اہم {plural} چیک نہیں کیے گئے — شپنگ سے پہلے ان کو حل کریں",
+    criticalTextAllClear: "✓ تمام اہم آئٹمز چیک کیے گئے — آپ کی شپمنٹ اہم کمپلائنس گیٹس پاس کرتی ہے",
+    criticalJump: "مجھے دکھائیں →",
+    toast: "✓ لنک کاپی ہو گیا — اپنے فریٹ فارورڈر یا خریداری ایجنٹ کے ساتھ شیئر کریں",
+    resetConfirm: "تمام چیک باکسز ری سیٹ کریں؟ آپ کی پیشرافت صاف ہو جائے گی۔",
+    band100: "شپمنٹ تیار — تمام 31 آئٹمز چیک کیے گئے",
+    band100Desc: "آپ کی شپمنٹ دستاویزات درست ہونی چاہئیں۔ آخری یاد دہانی: تصدیق کریں کہ آپ کا ریچ سرٹیفکیٹ 12 ماہ سے کم پرانا ہے اور آپ کا ریکس اعلان آپ کے کمرشل انوائس پر لفظ بہ لفظ درست ہے۔",
+    band71: "تقریباً تیار — {remaining} آئٹمز باقی",
+    band71Desc: "آپ {pct}% کمپلائنس ہیں۔ {criticalMsg} باقی آئٹمز مکمل کریں اور آپ شپنگ کے لیے تیار ہیں۔",
+    band41: "جزوی طور پر تیار — اہم خلا باقی",
+    band41Desc: "آپ چیک لسٹ سے {pct}% ہیں۔ {criticalMsg} اپنے کارگو لوڈ ہونے سے پہلے تمام حصے مکمل کریں۔",
+    band0: "شپنگ کے لیے تیار نہیں — اہم خلا شناخت ہوئے",
+    band0Desc: "آپ صرف کمپلائنس چیکس سے {pct}% ہیں۔ {criticalMsg} ان چیکس کو مکمل کیے بغیر شپنگ کرنا آپ کے کنٹینر کو ہیمبرگ یا روٹterdam پر مسترد ہونے، آپ کے خریدار سے پورا ٹیرف وصول ہونے، اور آپ کی شپمنٹ کو آپ کی لاگت پر تباہ ہونے کا خطرہ ہے۔"
+  }
+};
+
+// ── Set Language ──────────────────────────────────────────
+function setLanguage(lang) {
+  currentLang = lang;
+
+  // Update HTML dir attribute
+  document.documentElement.dir = lang === 'ur' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+
+  // Update language buttons
+  document.getElementById('langEn').classList.toggle('active', lang === 'en');
+  document.getElementById('langUr').classList.toggle('active', lang === 'ur');
+
+  // Update all elements with data-en and data-ur attributes
+  document.querySelectorAll('[data-en][data-ur]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) {
+      if (text.includes('<')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+
+  // Update page title
+  document.title = translations[lang].pageTitle;
+
+  // Update dynamic text elements
+  updateDynamicText();
+
+  // Save language preference
+  try { localStorage.setItem(LANG_KEY, lang); } catch(e) {}
+
+  // Re-render score banner if visible
+  const checked = document.querySelectorAll('.check-item.checked').length;
+  const criticalLeft = document.querySelectorAll('.check-item:not(.checked) .tag-critical').length;
+  if (checked > 0) {
+    updateScoreBanner(Math.round((checked / TOTAL_ITEMS) * 100), checked, criticalLeft);
+  }
+}
+
+// ── Update dynamic text elements ──────────────────────────
+function updateDynamicText() {
+  const t = translations[currentLang];
+  const checked = document.querySelectorAll('.check-item.checked').length;
+  const criticalLeft = document.querySelectorAll('.check-item:not(.checked) .tag-critical').length;
+
+  document.getElementById('progressLabel').textContent = t.progressLabel;
+  document.getElementById('progressStatus').textContent = t.progressStatus.replace('{checked}', checked).replace('{total}', TOTAL_ITEMS);
+  document.getElementById('saveIndicator').textContent = t.saveIndicator;
+  document.getElementById('toast').textContent = t.toast;
+
+  const criticalText = document.getElementById('criticalText');
+  const strip = document.getElementById('criticalStrip');
+  if (criticalLeft === 0) {
+    criticalText.textContent = t.criticalTextAllClear;
+  } else {
+    const plural = criticalLeft === 1 ? (currentLang === 'ur' ? 'آئٹم' : 'item') : (currentLang === 'ur' ? 'آئٹمز' : 'items');
+    criticalText.textContent = t.criticalText.replace('{count}', criticalLeft).replace('{plural}', plural);
+  }
+  document.querySelector('.critical-jump').textContent = t.criticalJump;
+}
 
 // ── Toggle individual checklist item ─────────────────────
 function toggleItem(el) {
@@ -1502,9 +1691,20 @@ function loadState() {
   } catch(e) {}
 }
 
+// ── Load language preference ─────────────────────────────
+function loadLanguage() {
+  try {
+    const savedLang = localStorage.getItem(LANG_KEY);
+    if (savedLang && (savedLang === 'en' || savedLang === 'ur')) {
+      setLanguage(savedLang);
+    }
+  } catch(e) {}
+}
+
 // ── Reset all ─────────────────────────────────────────────
 function resetAll() {
-  if (!confirm('Reset all checkboxes? Your progress will be cleared.')) return;
+  const t = translations[currentLang];
+  if (!confirm(t.resetConfirm)) return;
   document.querySelectorAll('.check-item').forEach(el => el.classList.remove('checked'));
   try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
   updateProgress();
@@ -1516,7 +1716,6 @@ function copyLink() {
   try {
     navigator.clipboard.writeText(url).then(() => showToast());
   } catch(e) {
-    // fallback
     const ta = document.createElement('textarea');
     ta.value = url; document.body.appendChild(ta);
     ta.select(); document.execCommand('copy');
@@ -1561,34 +1760,31 @@ function updateProgress() {
     document.getElementById(`pct-${i}`).textContent = pct + '%';
     document.getElementById(`fill-${i}`).style.width = pct + '%';
 
-    // Tab badge
     const badge = document.getElementById(`tab${i}badge`);
     if (badge) {
       const remaining = items.length - checked;
       badge.textContent = remaining === 0 ? '✓' : remaining;
     }
 
-    // Tab complete state
     const tabs = document.querySelectorAll('.tab-btn');
     if (tabs[i]) {
       tabs[i].classList.toggle('complete', checked === items.length && items.length > 0);
     }
 
-    // Count unchecked critical items
     const criticalUnchecked = document.querySelectorAll(`#checklist-${i} .check-item:not(.checked) .tag-critical`).length;
     totalCriticalUnchecked += criticalUnchecked;
 
     totalChecked += checked;
   }
 
-  // Overall progress bar
   const overallPct = Math.round((totalChecked / TOTAL_ITEMS) * 100);
   const fill = document.getElementById('progressFill');
   fill.style.width = overallPct + '%';
   document.getElementById('progressPct').textContent = overallPct + '%';
-  document.getElementById('progressStatus').textContent = `${totalChecked} of ${TOTAL_ITEMS} items checked`;
 
-  // Progress bar colour
+  const t = translations[currentLang];
+  document.getElementById('progressStatus').textContent = t.progressStatus.replace('{checked}', totalChecked).replace('{total}', TOTAL_ITEMS);
+
   if (overallPct >= 80) {
     fill.style.background = 'linear-gradient(90deg, #1A5C38 0%, #27AE60 100%)';
   } else if (overallPct >= 50) {
@@ -1597,10 +1793,7 @@ function updateProgress() {
     fill.style.background = 'linear-gradient(90deg, #C0392B 0%, #B8960C 100%)';
   }
 
-  // Critical strip
   updateCriticalStrip(totalCriticalUnchecked);
-
-  // Score interpretation banner
   updateScoreBanner(overallPct, totalChecked, totalCriticalUnchecked);
 }
 
@@ -1608,14 +1801,15 @@ function updateProgress() {
 function updateCriticalStrip(unchecked) {
   const strip = document.getElementById('criticalStrip');
   const text  = document.getElementById('criticalText');
+  const t = translations[currentLang];
 
   if (unchecked === 0) {
     strip.classList.add('all-clear');
-    text.textContent = '✓ All critical items checked — your shipment passes the key compliance gates';
+    text.textContent = t.criticalTextAllClear;
   } else {
     strip.classList.remove('all-clear');
-    const plural = unchecked === 1 ? 'item' : 'items';
-    text.textContent = `${unchecked} critical ${plural} unchecked — address these before shipping`;
+    const plural = unchecked === 1 ? (currentLang === 'ur' ? 'آئٹم' : 'item') : (currentLang === 'ur' ? 'آئٹمز' : 'items');
+    text.textContent = t.criticalText.replace('{count}', unchecked).replace('{plural}', plural);
   }
 }
 
@@ -1623,8 +1817,8 @@ function updateCriticalStrip(unchecked) {
 function updateScoreBanner(pct, checked, criticalLeft) {
   const banner  = document.getElementById('resultBanner');
   const content = document.getElementById('bannerContent');
+  const t = translations[currentLang];
 
-  // Only show banner once user has started checking items
   if (checked === 0) {
     banner.classList.remove('show');
     return;
@@ -1638,32 +1832,47 @@ function updateScoreBanner(pct, checked, criticalLeft) {
     html = `<div class="score-band band-success">
       <div class="score-band-icon">🎉</div>
       <div class="score-band-body">
-        <h3>Shipment Ready — All 31 Items Checked</h3>
-        <p>Your shipment documentation should be in order. Final reminder: confirm your REACH certificate is less than 12 months old and your REX declaration is word-for-word correct on your commercial invoice.</p>
+        <h3>${t.band100}</h3>
+        <p>${t.band100Desc}</p>
       </div>
     </div>`;
   } else if (pct >= 71) {
+    const criticalMsg = criticalLeft > 0 ? 
+      (currentLang === 'ur' ? 
+        `<strong>${criticalLeft} اہم آئٹم${criticalLeft > 1 ? 'ز' : ''} ابھی بھی چیک نہیں کیے گئے</strong> — یہ شپنگ سے پہلے حل ہونا چاہئیں۔` : 
+        `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} still unchecked</strong> — these must be resolved before shipping.`) 
+      : (currentLang === 'ur' ? 'کوئی اہم آئٹمز باقی نہیں۔ باقی آئٹمز مکمل کریں اور آپ شپنگ کے لیے تیار ہیں۔' : 'No critical items outstanding. Complete the remaining items and you are ready to ship.');
     html = `<div class="score-band band-good">
       <div class="score-band-icon">🔵</div>
       <div class="score-band-body">
-        <h3>Almost Ready — ${TOTAL_ITEMS - checked} Items Remaining</h3>
-        <p>You are ${pct}% compliant. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} still unchecked</strong> — these must be resolved before shipping.` : 'No critical items outstanding. Complete the remaining items and you are ready to ship.'}</p>
+        <h3>${t.band71.replace('{remaining}', TOTAL_ITEMS - checked)}</h3>
+        <p>${t.band71Desc.replace('{pct}', pct).replace('{criticalMsg}', criticalMsg)}</p>
       </div>
     </div>`;
   } else if (pct >= 41) {
+    const criticalMsg = criticalLeft > 0 ? 
+      (currentLang === 'ur' ? 
+        `<strong>${criticalLeft} اہم آئٹم${criticalLeft > 1 ? 'ز' : ''} چیک نہیں کیے گئے</strong> — اگر آپ ابھی شپ کرتے ہیں، تو آپ ٹیرف پینلٹیز، کنٹینر مستردی، یا کسٹم تاخیر کا خطرہ مول لیتے ہیں۔` : 
+        `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked</strong> — if you ship now, you risk tariff penalties, container rejection, or customs delays.`) 
+      : (currentLang === 'ur' ? 'جاری رکھیں — ابھی تک کوئی اہم آئٹمز باقی نہیں۔' : 'Keep going — no critical items outstanding yet.');
     html = `<div class="score-band band-warning">
       <div class="score-band-icon">⚠️</div>
       <div class="score-band-body">
-        <h3>Partially Ready — Significant Gaps Remain</h3>
-        <p>You are ${pct}% through the checklist. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked</strong> — if you ship now, you risk tariff penalties, container rejection, or customs delays.` : 'Keep going — no critical items outstanding yet.'} Complete all sections before your cargo is loaded.</p>
+        <h3>${t.band41}</h3>
+        <p>${t.band41Desc.replace('{pct}', pct).replace('{criticalMsg}', criticalMsg)}</p>
       </div>
     </div>`;
   } else {
+    const criticalMsg = criticalLeft > 0 ? 
+      (currentLang === 'ur' ? 
+        `<strong>${criticalLeft} اہم آئٹم${criticalLeft > 1 ? 'ز' : ''} چیک نہیں کیے گئے۔</strong>` : 
+        `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked.</strong>`) 
+      : '';
     html = `<div class="score-band band-danger">
       <div class="score-band-icon">🔴</div>
       <div class="score-band-body">
-        <h3>Not Ready to Ship — Critical Gaps Identified</h3>
-        <p>You are only ${pct}% through compliance checks. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked.</strong>` : ''} Shipping without completing these checks risks your container being rejected at Hamburg or Rotterdam, your buyer being billed the full tariff, and your shipment being destroyed at your cost.</p>
+        <h3>${t.band0}</h3>
+        <p>${t.band0Desc.replace('{pct}', pct).replace('{criticalMsg}', criticalMsg)}</p>
       </div>
     </div>`;
   }
@@ -1701,6 +1910,7 @@ function toggleAllSections() {
 
 // ── Init ─────────────────────────────────────────────────
 loadState();
+loadLanguage();
 updateProgress();
 </script>
 </body>

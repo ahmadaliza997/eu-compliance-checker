@@ -121,6 +121,103 @@ body {
   border: 1.5px solid var(--green);
 }
 .btn-outline:hover { background: var(--green-xlt); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-light);
+  border: 1.5px solid var(--border);
+}
+.btn-ghost:hover { color: #C0392B; border-color: #C0392B; background: #FEF2F2; }
+
+/* ── Critical items strip ────────────────────────────────── */
+.critical-strip {
+  background: #FEF3C7;
+  border-bottom: 1px solid #F59E0B;
+  padding: 10px 40px;
+  position: sticky;
+  top: 121px;
+  z-index: 85;
+  transition: all var(--transition);
+}
+.critical-strip.hidden { display: none; }
+.critical-strip.all-clear {
+  background: #F0FDF4;
+  border-bottom-color: #86EFAC;
+}
+.critical-strip-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #78350F;
+}
+.critical-strip.all-clear .critical-strip-inner { color: #14532D; }
+.critical-icon { font-size: 14px; flex-shrink: 0; }
+.critical-jump {
+  margin-left: auto;
+  background: #D97706;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: 'DM Sans', sans-serif;
+  flex-shrink: 0;
+}
+.critical-jump:hover { background: #B45309; }
+.critical-strip.all-clear .critical-jump { display: none; }
+
+/* ── Score interpretation banners ───────────────────────── */
+.score-band {
+  padding: 28px 36px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: fadeUp 0.35s ease;
+}
+.score-band-icon { font-size: 36px; flex-shrink: 0; }
+.score-band-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.score-band-body p { font-size: 14px; line-height: 1.6; opacity: 0.9; }
+.band-danger  { background: #FEF2F2; border: 1.5px solid #FECACA; color: #7F1D1D; }
+.band-warning { background: #FFFBEB; border: 1.5px solid #FDE68A; color: #78350F; }
+.band-good    { background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #1E3A8A; }
+.band-success { background: linear-gradient(135deg, var(--green) 0%, #0F3D24 100%); color: #fff; border: none; box-shadow: 0 8px 32px rgba(26,92,56,0.3); }
+.band-success h3 { color: #F5C842; }
+.band-success p  { opacity: 0.85; }
+
+/* ── Toast ───────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
@@ -743,6 +840,13 @@ body {
     margin-bottom: 10px;
   }
 }
+.save-indicator {
+  font-size: 11px;
+  color: var(--ink-light);
+  white-space: nowrap;
+  opacity: 0.6;
+}
+@media print { .save-indicator { display: none; } }
 .print-header { display: none; }
 
 /* ── Responsive ──────────────────────────────────────────── */
@@ -784,13 +888,21 @@ body {
       </div>
     </div>
     <div class="header-actions">
+      <button class="btn btn-ghost" onclick="resetAll()" title="Reset all checkboxes">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        Reset
+      </button>
+      <button class="btn btn-outline" onclick="copyLink()" id="shareBtn">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Share Tool
+      </button>
       <button class="btn btn-outline" onclick="toggleAllSections()">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
-        View All Sections
+        View All
       </button>
       <button class="btn btn-primary" onclick="window.print()">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Download / Print PDF
+        Print PDF
       </button>
     </div>
   </div>
@@ -832,6 +944,16 @@ body {
     </div>
     <span class="progress-pct" id="progressPct">0%</span>
     <span class="progress-status" id="progressStatus">0 of 31 items checked</span>
+    <span class="save-indicator" id="saveIndicator" title="Progress is automatically saved in your browser">💾 Auto-saved</span>
+  </div>
+</div>
+
+<!-- ── Critical counter strip ──────────────────────────────── -->
+<div class="critical-strip" id="criticalStrip">
+  <div class="critical-strip-inner">
+    <span class="critical-icon">🔴</span>
+    <span id="criticalText">9 critical items unchecked — address these before shipping</span>
+    <button class="critical-jump" onclick="jumpToCritical()">Show me →</button>
   </div>
 </div>
 
@@ -843,11 +965,13 @@ body {
     EU Export Compliance Checker · Pakistani Textile Exporters · Developed by Ali Ahmad in cooperation with Commercial Wing, Embassy of Pakistan, Budapest · 2026
   </div>
 
-  <!-- Result banner -->
+  <!-- Score interpretation banner — dynamic -->
   <div class="result-banner" id="resultBanner">
-    <h3>🎉 Shipment Ready for EU Export</h3>
-    <p>All 31 compliance items are checked. Your shipment documentation should be in order. Double-check your REACH certificate is less than 12 months old and your REX declaration is on the invoice.</p>
+    <div id="bannerContent"></div>
   </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">✓ Link copied — share with your freight forwarder or buying agent</div>
 
   <!-- ── Section tabs ──────────────────────────────────────── -->
   <div class="section-tabs" id="sectionTabs">
@@ -1347,15 +1471,87 @@ const TOTAL_ITEMS = 31;
 const sectionCounts = [8, 6, 5, 6, 6];
 let allSectionsVisible = false;
 
+const STORAGE_KEY = 'eu_compliance_checker_v1';
+
 // ── Toggle individual checklist item ─────────────────────
 function toggleItem(el) {
   el.classList.toggle('checked');
+  saveState();
   updateProgress();
+}
+
+// ── Save state to localStorage ────────────────────────────
+function saveState() {
+  const state = [];
+  document.querySelectorAll('.check-item').forEach((el, idx) => {
+    state[idx] = el.classList.contains('checked');
+  });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+
+// ── Load state from localStorage ─────────────────────────
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const state = JSON.parse(raw);
+    const items = document.querySelectorAll('.check-item');
+    items.forEach((el, idx) => {
+      if (state[idx]) el.classList.add('checked');
+    });
+  } catch(e) {}
+}
+
+// ── Reset all ─────────────────────────────────────────────
+function resetAll() {
+  if (!confirm('Reset all checkboxes? Your progress will be cleared.')) return;
+  document.querySelectorAll('.check-item').forEach(el => el.classList.remove('checked'));
+  try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+  updateProgress();
+}
+
+// ── Copy link to clipboard ────────────────────────────────
+function copyLink() {
+  const url = window.location.href.split('?')[0];
+  try {
+    navigator.clipboard.writeText(url).then(() => showToast());
+  } catch(e) {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = url; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta); showToast();
+  }
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+// ── Jump to first unchecked critical item ─────────────────
+function jumpToCritical() {
+  const criticals = document.querySelectorAll('.check-item:not(.checked) .tag-critical');
+  if (criticals.length === 0) return;
+  const item = criticals[0].closest('.check-item');
+  const sectionCard = item.closest('.section-card');
+  if (sectionCard) {
+    const idx = parseInt(sectionCard.id.split('-')[1]);
+    showSection(idx, document.querySelectorAll('.tab-btn')[idx]);
+  }
+  setTimeout(() => {
+    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    item.style.outline = '2px solid #D97706';
+    item.style.outlineOffset = '3px';
+    setTimeout(() => { item.style.outline = ''; item.style.outlineOffset = ''; }, 2000);
+  }, 200);
 }
 
 // ── Update all progress indicators ───────────────────────
 function updateProgress() {
   let totalChecked = 0;
+  let totalCriticalUnchecked = 0;
 
   for (let i = 0; i < 5; i++) {
     const items = document.querySelectorAll(`#checklist-${i} .check-item`);
@@ -1365,63 +1561,124 @@ function updateProgress() {
     document.getElementById(`pct-${i}`).textContent = pct + '%';
     document.getElementById(`fill-${i}`).style.width = pct + '%';
 
-    // Update tab badge
+    // Tab badge
     const badge = document.getElementById(`tab${i}badge`);
     if (badge) {
       const remaining = items.length - checked;
       badge.textContent = remaining === 0 ? '✓' : remaining;
     }
 
-    // Mark tab as complete
+    // Tab complete state
     const tabs = document.querySelectorAll('.tab-btn');
     if (tabs[i]) {
-      if (checked === items.length && items.length > 0) {
-        tabs[i].classList.add('complete');
-      } else {
-        tabs[i].classList.remove('complete');
-      }
+      tabs[i].classList.toggle('complete', checked === items.length && items.length > 0);
     }
+
+    // Count unchecked critical items
+    const criticalUnchecked = document.querySelectorAll(`#checklist-${i} .check-item:not(.checked) .tag-critical`).length;
+    totalCriticalUnchecked += criticalUnchecked;
 
     totalChecked += checked;
   }
 
-  // Overall progress
+  // Overall progress bar
   const overallPct = Math.round((totalChecked / TOTAL_ITEMS) * 100);
-  document.getElementById('progressFill').style.width = overallPct + '%';
+  const fill = document.getElementById('progressFill');
+  fill.style.width = overallPct + '%';
   document.getElementById('progressPct').textContent = overallPct + '%';
   document.getElementById('progressStatus').textContent = `${totalChecked} of ${TOTAL_ITEMS} items checked`;
 
-  // Update label colour dynamically
-  const fill = document.getElementById('progressFill');
+  // Progress bar colour
   if (overallPct >= 80) {
     fill.style.background = 'linear-gradient(90deg, #1A5C38 0%, #27AE60 100%)';
   } else if (overallPct >= 50) {
-    fill.style.background = 'linear-gradient(90deg, #1A5C38 0%, #2E7D52 100%)';
+    fill.style.background = 'linear-gradient(90deg, #B8960C 0%, #1A5C38 100%)';
+  } else {
+    fill.style.background = 'linear-gradient(90deg, #C0392B 0%, #B8960C 100%)';
   }
 
-  // Result banner
-  const banner = document.getElementById('resultBanner');
-  if (totalChecked === TOTAL_ITEMS) {
-    banner.classList.add('show');
-    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // Critical strip
+  updateCriticalStrip(totalCriticalUnchecked);
+
+  // Score interpretation banner
+  updateScoreBanner(overallPct, totalChecked, totalCriticalUnchecked);
+}
+
+// ── Critical items strip ──────────────────────────────────
+function updateCriticalStrip(unchecked) {
+  const strip = document.getElementById('criticalStrip');
+  const text  = document.getElementById('criticalText');
+
+  if (unchecked === 0) {
+    strip.classList.add('all-clear');
+    text.textContent = '✓ All critical items checked — your shipment passes the key compliance gates';
   } else {
-    banner.classList.remove('show');
+    strip.classList.remove('all-clear');
+    const plural = unchecked === 1 ? 'item' : 'items';
+    text.textContent = `${unchecked} critical ${plural} unchecked — address these before shipping`;
   }
+}
+
+// ── Score interpretation banner ───────────────────────────
+function updateScoreBanner(pct, checked, criticalLeft) {
+  const banner  = document.getElementById('resultBanner');
+  const content = document.getElementById('bannerContent');
+
+  // Only show banner once user has started checking items
+  if (checked === 0) {
+    banner.classList.remove('show');
+    return;
+  }
+
+  banner.classList.add('show');
+
+  let html = '';
+
+  if (pct === 100) {
+    html = `<div class="score-band band-success">
+      <div class="score-band-icon">🎉</div>
+      <div class="score-band-body">
+        <h3>Shipment Ready — All 31 Items Checked</h3>
+        <p>Your shipment documentation should be in order. Final reminder: confirm your REACH certificate is less than 12 months old and your REX declaration is word-for-word correct on your commercial invoice.</p>
+      </div>
+    </div>`;
+  } else if (pct >= 71) {
+    html = `<div class="score-band band-good">
+      <div class="score-band-icon">🔵</div>
+      <div class="score-band-body">
+        <h3>Almost Ready — ${TOTAL_ITEMS - checked} Items Remaining</h3>
+        <p>You are ${pct}% compliant. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} still unchecked</strong> — these must be resolved before shipping.` : 'No critical items outstanding. Complete the remaining items and you are ready to ship.'}</p>
+      </div>
+    </div>`;
+  } else if (pct >= 41) {
+    html = `<div class="score-band band-warning">
+      <div class="score-band-icon">⚠️</div>
+      <div class="score-band-body">
+        <h3>Partially Ready — Significant Gaps Remain</h3>
+        <p>You are ${pct}% through the checklist. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked</strong> — if you ship now, you risk tariff penalties, container rejection, or customs delays.` : 'Keep going — no critical items outstanding yet.'} Complete all sections before your cargo is loaded.</p>
+      </div>
+    </div>`;
+  } else {
+    html = `<div class="score-band band-danger">
+      <div class="score-band-icon">🔴</div>
+      <div class="score-band-body">
+        <h3>Not Ready to Ship — Critical Gaps Identified</h3>
+        <p>You are only ${pct}% through compliance checks. ${criticalLeft > 0 ? `<strong>${criticalLeft} critical item${criticalLeft > 1 ? 's' : ''} are unchecked.</strong>` : ''} Shipping without completing these checks risks your container being rejected at Hamburg or Rotterdam, your buyer being billed the full tariff, and your shipment being destroyed at your cost.</p>
+      </div>
+    </div>`;
+  }
+
+  content.innerHTML = html;
 }
 
 // ── Section tabs ─────────────────────────────────────────
 function showSection(idx, btn) {
   if (allSectionsVisible) {
-    // Reset to single section view
     allSectionsVisible = false;
     document.getElementById('mainContent').classList.remove('all-sections');
   }
-
-  // Hide all sections
   document.querySelectorAll('.section-card').forEach(c => c.classList.remove('visible'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-
-  // Show target
   document.getElementById(`section-${idx}`).classList.add('visible');
   btn.classList.add('active');
 }
@@ -1430,7 +1687,6 @@ function showSection(idx, btn) {
 function toggleAllSections() {
   allSectionsVisible = !allSectionsVisible;
   const main = document.getElementById('mainContent');
-
   if (allSectionsVisible) {
     main.classList.add('all-sections');
     document.querySelectorAll('.section-card').forEach(c => c.classList.add('visible'));
@@ -1444,6 +1700,7 @@ function toggleAllSections() {
 }
 
 // ── Init ─────────────────────────────────────────────────
+loadState();
 updateProgress();
 </script>
 </body>

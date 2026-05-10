@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU Export Compliance Checker — Pakistani Textile Exporters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  --green:      #1A5C38;
+  --green-mid:  #2E7D52;
+  --green-lt:   #E8F4EE;
+  --green-xlt:  #F3FAF6;
+  --blue:       #003399;
+  --blue-lt:    #EBF0FA;
+  --gold:       #B8960C;
+  --gold-lt:    #FDF6DC;
+  --cream:      #FAFAF7;
+  --white:      #FFFFFF;
+  --ink:        #1C1C1C;
+  --ink-mid:    #3D3D3D;
+  --ink-light:  #6B7280;
+  --border:     #DDE3D8;
+  --shadow:     rgba(26,92,56,0.08);
+  --radius:     10px;
+  --radius-sm:  6px;
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ── Top banner ──────────────────────────────────────────── */
+.top-banner {
+  background: var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+.top-banner span { opacity: 0.75; margin: 0 10px; }
+
+/* ── Header ──────────────────────────────────────────────── */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo-block { display: flex; align-items: center; gap: 14px; }
+.logo-flag {
+  width: 36px; height: 36px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.logo-text { line-height: 1.2; }
+.logo-text strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: var(--green);
+  font-weight: 600;
+}
+.logo-text small {
+  font-size: 11px;
+  color: var(--ink-light);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.header-actions { display: flex; gap: 10px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,92,56,0.25); }
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.btn-outline:hover { background: var(--green-xlt); }
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--green) 0%, #0F3D24 100%);
+  color: #fff;
+  padding: 72px 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 10%;
+  width: 300px; height: 300px;
+  background: rgba(184,150,12,0.08);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+.hero-badge::before { content: '🇵🇰'; font-size: 14px; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #F5C842;
+}
+.hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #F5C842;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+  margin-top: 3px;
+  letter-spacing: 0.03em;
+}
+
+/* ── Overall progress ────────────────────────────────────── */
+.progress-bar-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 40px;
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.progress-bar-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.progress-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-mid);
+  white-space: nowrap;
+  min-width: 140px;
+}
+.progress-track {
+  flex: 1;
+  height: 8px;
+  background: #E8EDE5;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-mid) 100%);
+  border-radius: 99px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+.progress-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--green);
+  min-width: 38px;
+  text-align: right;
+}
+.progress-status {
+  font-size: 12px;
+  color: var(--ink-light);
+  white-space: nowrap;
+}
+
+/* ── Main layout ─────────────────────────────────────────── */
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+/* ── Section nav tabs ────────────────────────────────────── */
+.section-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--ink-mid);
+  transition: all var(--transition);
+  position: relative;
+}
+.tab-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-xlt);
+}
+.tab-btn.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+.tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 99px;
+  font-size: 10.5px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  color: inherit;
+}
+.tab-btn:not(.active) .tab-badge {
+  background: var(--green-lt);
+  color: var(--green);
+}
+.tab-btn.complete .tab-badge {
+  background: rgba(255,255,255,0.25);
+}
+.tab-btn.complete::after {
+  content: '✓';
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 16px; height: 16px;
+  background: #F5C842;
+  color: var(--green);
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Checklist section card ──────────────────────────────── */
+.section-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 16px var(--shadow);
+  display: none;
+  animation: fadeUp 0.3s ease forwards;
+}
+.section-card.visible { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-header {
+  padding: 28px 36px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card-header-left { flex: 1; }
+.card-section-num {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  background: var(--green-lt);
+  padding: 3px 10px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.card-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.card-header p {
+  font-size: 14px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  max-width: 580px;
+}
+.card-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.card-pct {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+.card-pct-label {
+  font-size: 11px;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+}
+.card-mini-track {
+  width: 80px;
+  height: 5px;
+  background: #E8EDE5;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.card-mini-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+/* ── Warning callout ─────────────────────────────────────── */
+.callout {
+  margin: 0 36px 24px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.callout-warn {
+  background: #FEF3C7;
+  border-left: 3px solid #D97706;
+  color: #78350F;
+}
+.callout-info {
+  background: var(--blue-lt);
+  border-left: 3px solid var(--blue);
+  color: #1E3A8A;
+}
+.callout-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+/* ── Checklist items ─────────────────────────────────────── */
+.checklist {
+  padding: 8px 36px 36px;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: 4px;
+  border: 1.5px solid transparent;
+  position: relative;
+}
+.check-item:hover {
+  background: var(--green-xlt);
+  border-color: var(--green-lt);
+}
+.check-item.checked {
+  background: var(--green-xlt);
+  border-color: rgba(26,92,56,0.2);
+}
+.check-item.checked .item-text { color: var(--ink-mid); }
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  background: var(--white);
+}
+.check-item:hover .checkbox { border-color: var(--green); }
+.check-item.checked .checkbox {
+  background: var(--green);
+  border-color: var(--green);
+}
+.checkbox svg {
+  display: none;
+  width: 13px;
+  height: 13px;
+}
+.check-item.checked .checkbox svg { display: block; }
+
+.item-body { flex: 1; }
+.item-text {
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.55;
+  font-weight: 500;
+}
+.item-detail {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.item-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 99px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.tag-critical { background: #FEE2E2; color: #991B1B; }
+.tag-action   { background: var(--gold-lt); color: #78520A; }
+.tag-verify   { background: var(--blue-lt); color: var(--blue); }
+
+/* ── Section divider in checklist ────────────────────────── */
+.check-divider {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  padding: 12px 20px 6px;
+  margin-top: 8px;
+}
+
+/* ── Ahmed tip ───────────────────────────────────────────── */
+.ahmed-tip {
+  margin: 0 36px 20px;
+  background: var(--gold-lt);
+  border: 1px solid #E8D070;
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.ahmed-tip-icon {
+  width: 32px; height: 32px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.ahmed-tip-body strong {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.ahmed-tip-body p {
+  font-size: 13.5px;
+  color: #5C4200;
+  line-height: 1.6;
+}
+
+/* ── All sections display ────────────────────────────────── */
+.all-sections .section-card { display: block; }
+
+/* ── Result banner ───────────────────────────────────────── */
+.result-banner {
+  display: none;
+  background: linear-gradient(135deg, var(--green), #0F3D24);
+  color: #fff;
+  padding: 36px 48px;
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  text-align: center;
+  animation: fadeUp 0.4s ease;
+  box-shadow: 0 8px 32px rgba(26,92,56,0.3);
+}
+.result-banner.show { display: block; }
+.result-banner h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #F5C842;
+}
+.result-banner p { font-size: 15px; color: rgba(255,255,255,0.8); }
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 40px;
+}
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+.footer-brand strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+.footer-brand p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.footer-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.footer-author:hover { background: rgba(255,255,255,0.1); }
+.author-avatar {
+  width: 34px; height: 34px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+}
+.author-info strong { display: block; font-size: 13px; color: #fff; font-weight: 600; }
+.author-info small { font-size: 11px; color: rgba(255,255,255,0.5); }
+.footer-col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+}
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  max-width: 1080px;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.update-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  padding: 3px 10px;
+  font-size: 11px;
+}
+.update-dot {
+  width: 6px; height: 6px;
+  background: #4ADE80;
+  border-radius: 50%;
+}
+
+/* ── Print styles ────────────────────────────────────────── */
+@media print {
+  .top-banner, .site-header, .progress-bar-wrap,
+  .section-tabs, .header-actions, .site-footer,
+  .result-banner, .btn { display: none !important; }
+
+  body { background: #fff; font-size: 12px; }
+  .hero {
+    background: #1A5C38 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 30px 30px 40px;
+    page-break-after: avoid;
+  }
+  .hero h1 { font-size: 22px; }
+  .hero-stats { gap: 20px; }
+  .stat-num { font-size: 18px; }
+
+  .main { padding: 20px; }
+  .section-card {
+    display: block !important;
+    break-inside: avoid;
+    box-shadow: none;
+    margin-bottom: 20px;
+    border: 1.5px solid #1A5C38;
+    page-break-inside: avoid;
+  }
+  .card-header { padding: 16px 20px 14px; }
+  .card-header h2 { font-size: 16px; }
+  .checklist { padding: 8px 20px 20px; }
+  .check-item { padding: 10px 10px; }
+  .checkbox {
+    border: 1.5px solid #333;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .check-item.checked .checkbox {
+    background: #1A5C38 !important;
+    border-color: #1A5C38 !important;
+  }
+  .callout, .ahmed-tip { margin: 0 20px 14px; }
+  .card-pct { font-size: 22px; }
+  .item-text { font-size: 12px; }
+  .item-detail { font-size: 11px; }
+
+  .print-header {
+    display: block !important;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+}
+.print-header { display: none; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .site-header { padding: 0 20px; }
+  .hero { padding: 48px 20px 56px; }
+  .progress-bar-wrap { padding: 14px 20px; }
+  .main { padding: 28px 20px 60px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .card-header { flex-direction: column; padding: 20px 20px 16px; }
+  .card-progress { flex-direction: row; align-items: center; }
+  .checklist { padding: 8px 20px 24px; }
+  .callout, .ahmed-tip { margin: 0 20px 16px; }
+  .hero-stats { gap: 20px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── Top banner ─────────────────────────────────────────── -->
+<div class="top-banner">
+  🇵🇰 For Pakistani Textile Exporters
+  <span>|</span>
+  Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest
+  <span>|</span>
+  Last updated: 2026
+</div>
+
+<!-- ── Header ─────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-flag">🇵🇰</div>
+      <div class="logo-text">
+        <strong>EU Compliance Checker</strong>
+        <small>Pakistani Textile Exporters · EU Market</small>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-outline" onclick="toggleAllSections()">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        View All Sections
+      </button>
+      <button class="btn btn-primary" onclick="window.print()">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Download / Print PDF
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Pakistani Textile Exporters — EU Market Access</div>
+    <h1>EU Export<br><em>Compliance Checker</em></h1>
+    <p class="hero-sub">A practical pre-shipment checklist tool for Pakistani textile factory owners exporting to the European Union. Built on current 2025–2026 EU regulations. Free to use, free to print.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Compliance Areas</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">31</span>
+        <span class="stat-label">Checklist Items</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0%</span>
+        <span class="stat-label">Tariff with GSP+</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$0</span>
+        <span class="stat-label">Cost to Use</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Progress bar ───────────────────────────────────────── -->
+<div class="progress-bar-wrap">
+  <div class="progress-bar-inner">
+    <span class="progress-label" id="progressLabel">Overall Readiness</span>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-pct" id="progressPct">0%</span>
+    <span class="progress-status" id="progressStatus">0 of 31 items checked</span>
+  </div>
+</div>
+
+<!-- ── Main ───────────────────────────────────────────────── -->
+<main class="main" id="mainContent">
+
+  <!-- Print header -->
+  <div class="print-header">
+    EU Export Compliance Checker · Pakistani Textile Exporters · Developed by Ali Ahmad in cooperation with Commercial Wing, Embassy of Pakistan, Budapest · 2026
+  </div>
+
+  <!-- Result banner -->
+  <div class="result-banner" id="resultBanner">
+    <h3>🎉 Shipment Ready for EU Export</h3>
+    <p>All 31 compliance items are checked. Your shipment documentation should be in order. Double-check your REACH certificate is less than 12 months old and your REX declaration is on the invoice.</p>
+  </div>
+
+  <!-- ── Section tabs ──────────────────────────────────────── -->
+  <div class="section-tabs" id="sectionTabs">
+    <button class="tab-btn active" onclick="showSection(0, this)">
+      📋 GSP+ Origin
+      <span class="tab-badge" id="tab0badge">8</span>
+    </button>
+    <button class="tab-btn" onclick="showSection(1, this)">
+      🧪 REACH Testing
+      <span class="tab-badge" id="tab1badge">6</span>
+    </button>
+    <button class="tab-btn" onclick="showSection(2, this)">
+      🏷️ Labelling
+      <span class="tab-badge" id="tab2badge">5</span>
+    </button>
+    <button class="tab-btn" onclick="showSection(3, this)">
+      📦 Documents
+      <span class="tab-badge" id="tab3badge">6</span>
+    </button>
+    <button class="tab-btn" onclick="showSection(4, this)">
+      🌱 Sustainability
+      <span class="tab-badge" id="tab4badge">6</span>
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 1 — GSP+ Origin
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section-card visible" id="section-0">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-section-num">Section 1 of 5</div>
+        <h2>GSP+ Origin Rules</h2>
+        <p>Pakistan's zero-tariff benefit only applies if your goods genuinely qualify. These checks ensure your shipment can claim the GSP+ preferential rate — saving your buyer 9–12% in customs duties.</p>
+      </div>
+      <div class="card-progress">
+        <span class="card-pct" id="pct-0">0%</span>
+        <span class="card-pct-label">complete</span>
+        <div class="card-mini-track"><div class="card-mini-fill" id="fill-0"></div></div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <div><strong>Most costly mistake:</strong> Declaring GSP+ on fabric that was woven outside Pakistan (e.g. imported from China), then only cut and sewn in Pakistan. This fails the double transformation rule. Your buyer will be billed the full tariff and will recover it from you.</div>
+    </div>
+
+    <div class="ahmed-tip">
+      <div class="ahmed-tip-icon">💡</div>
+      <div class="ahmed-tip-body">
+        <strong>Ahmed's Example</strong>
+        <p>Ahmed buys Pakistani yarn, weaves it into fabric at his Faisalabad mill, then cuts and sews the finished linen — both steps in Pakistan. He qualifies for GSP+. If he instead imports Chinese grey fabric and only sews it in Faisalabad, he does NOT qualify.</p>
+      </div>
+    </div>
+
+    <div class="checklist" id="checklist-0">
+      <div class="check-divider">HS Code & Product Classification</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I know the correct HS code for my products <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Garments (knitted) = HS Ch. 61 · Garments (woven) = HS Ch. 62 · Home textiles = HS Ch. 63 · Cotton fabric = HS Ch. 52. Wrong HS code = wrong tariff rate.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">The HS code on my invoice matches the HS code on my bill of lading</div>
+          <div class="item-detail">Mismatches between documents trigger automatic customs flags and delays at the EU port of entry.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">Double Transformation — Origin Qualification</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My fabric was woven or knitted in Pakistan — not imported as ready-made fabric <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">EU double transformation rule: both weaving AND cutting/sewing must happen in Pakistan. Fabric imported from China or India and only sewn in Pakistan does NOT qualify for GSP+.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have supplier invoices or mill certificates showing where my yarn and fabric were sourced</div>
+          <div class="item-detail">If EU customs audits your origin declaration, you need paper evidence. Keep these records for at least 3 years.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">REX Registration or Form A Certificate</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I am registered as a REX exporter with TDAP — OR — I have a Form A certificate for this shipment <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Without one of these, your buyer cannot claim the GSP+ zero tariff at EU customs. REX registration is free via TDAP (tdap.gov.pk) and takes 2–4 weeks. Apply once, use forever.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My commercial invoice includes the correct REX origin declaration statement</div>
+          <div class="item-detail">The exact required text: "I, the exporter of the products covered by this document, declare that, except where otherwise clearly indicated, these products are of Pakistan preferential origin." Followed by your REX number.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I understand that if my origin declaration is wrong, my buyer will be billed the full tariff — and will recover it from me</div>
+          <div class="item-detail">On a $20,000 shipment of garments, the full MFN tariff can be $2,000–$2,400. This amount becomes your liability if the origin declaration fails.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 2 — REACH
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section-card" id="section-1">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-section-num">Section 2 of 5</div>
+        <h2>REACH Chemical Testing</h2>
+        <p>The EU bans certain chemicals in textile products. If your fabric contains banned substances above legal limits, EU customs can reject and destroy your entire container. A pre-shipment test costs $150–$400. A failed container costs thousands.</p>
+      </div>
+      <div class="card-progress">
+        <span class="card-pct" id="pct-1">0%</span>
+        <span class="card-pct-label">complete</span>
+        <div class="card-mini-track"><div class="card-mini-fill" id="fill-1"></div></div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">🚨</span>
+      <div><strong>If your shipment fails at EU customs:</strong> The container is quarantined, then destroyed at your cost. Your buyer loses their sale and claims damages. Your company is entered on the EU RAPEX alert system — visible to all EU importers. A $200 test prevents all of this.</div>
+    </div>
+
+    <div class="ahmed-tip">
+      <div class="ahmed-tip-icon">💡</div>
+      <div class="ahmed-tip-body">
+        <strong>Ahmed's Example</strong>
+        <p>Ahmed sends one white fabric sample and one coloured border fabric sample to SGS Lahore before shipping 200 boxes of bed linen. Cost: $180. Test takes 7 days. Both pass. He attaches the certificates to his shipping documents. The container clears Hamburg customs without issue.</p>
+      </div>
+    </div>
+
+    <div class="checklist" id="checklist-1">
+      <div class="check-divider">Pre-Shipment Testing</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have sent fabric samples to an accredited lab at least 10 days before my planned ship date <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Accredited labs in Pakistan: SGS (+92-42-111-747-474) · Bureau Veritas (+92-21-3241-4571) · Intertek (+92-21-3260-7100). Testing takes 5–10 working days.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I tested every distinct fabric type in this shipment separately</div>
+          <div class="item-detail">White fabric and coloured/printed fabric must be tested separately. Different dye batches = different test results. Do not assume one fabric type clears all.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">What the Test Must Cover</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My test certificate covers all 5 key substance groups <span class="item-tag tag-verify">Verify</span></div>
+          <div class="item-detail">Check your certificate covers: (1) Azo dyes / carcinogenic amines — BANNED · (2) Formaldehyde — 75 mg/kg children, 300 mg/kg adults · (3) Heavy metals: Lead, Cadmium, Chromium VI · (4) NPE (Nonylphenol Ethoxylates) — 25 mg/kg limit · (5) Phthalates in plastic accessories.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My test certificate is less than 12 months old for this fabric type and dye batch</div>
+          <div class="item-detail">An old certificate from a previous order does not cover a new dye batch. If you changed dye supplier or dye formula, retest.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">Documentation</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My test certificate shows a PASS conclusion — not just test values <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">The certificate conclusion section should say: "All tested parameters comply with applicable EU REACH restrictions." If it says FAIL or shows values above limits — do NOT ship. Contact your dye supplier immediately.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have included the test certificate PDF in the document pack sent to my buyer and freight forwarder</div>
+          <div class="item-detail">EU customs can request this at any time during clearance. Your buyer's customs agent needs it available immediately. Email the PDF before the shipment departs Karachi.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 3 — LABELLING
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section-card" id="section-2">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-section-num">Section 3 of 5</div>
+        <h2>Product Labelling</h2>
+        <p>Every textile product sold in the EU must carry specific label information. Missing or incorrect labels mean your Hungarian buyer cannot legally sell your products at retail — resulting in returns or costly relabelling charges deducted from your payment.</p>
+      </div>
+      <div class="card-progress">
+        <span class="card-pct" id="pct-2">0%</span>
+        <span class="card-pct-label">complete</span>
+        <div class="card-mini-track"><div class="card-mini-fill" id="fill-2"></div></div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">🇭🇺</span>
+      <div><strong>Selling to Hungary specifically:</strong> The physical product label must include Hungarian language text for retail sale. English-only labels are one of the most common causes of returns from Hungarian importers. Relabelling typically costs $0.20–$0.50 per unit — on 5,000 units, that is up to $2,500 deducted from your payment.</div>
+    </div>
+
+    <div class="ahmed-tip">
+      <div class="ahmed-tip-icon">💡</div>
+      <div class="ahmed-tip-body">
+        <strong>Turn This Into a Competitive Advantage</strong>
+        <p>Send your Hungarian buyer a label PDF template for approval before you print labels at scale. Ask them to confirm the Hungarian translation. Most Pakistani suppliers don't offer this. Buyers notice — and they remember.</p>
+      </div>
+    </div>
+
+    <div class="checklist" id="checklist-2">
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My label shows exact fibre composition as percentages <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Must be exact: "100% Cotton" or "60% Cotton, 40% Polyester." Not "60/40 cotton poly." Not rounded figures. Every fibre component must be listed. If the filling and cover of a cushion differ, both must be stated.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My label says "Made in Pakistan" — in full, not "PK" or "Origin: Pakistan" <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Country of origin is mandatory for all non-EU imports. The full text "Made in Pakistan" is required. Abbreviations or blank fields are not acceptable.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My label uses standard ISO care symbols — not text-only care instructions</div>
+          <div class="item-detail">The washing machine symbol, iron symbol, bleach triangle, tumble dry symbol etc. are required. Text instructions alone ("machine wash at 40°C") are not sufficient under EU rules. ISO 3758 symbols must be present.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">For Hungary: I have provided a Hungarian-language label template to my buyer for approval <span class="item-tag tag-action">Action</span></div>
+          <div class="item-detail">Key Hungarian terms: "100% Pamut" (100% Cotton) · "Gyártva: Pakisztán" (Made in Pakistan) · "60°C-on mosható" (machine wash 60°C). A freelance translator on Fiverr translates a label for $10–$20. Do this once, reuse the template.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My label template has been approved by my buyer before large-scale label printing</div>
+          <div class="item-detail">Send a PDF of the exact label design before you print thousands of labels. Catching an error at proof stage costs nothing. Reprinting 10,000 labels after production costs real money and causes delays.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 4 — DOCUMENTS
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section-card" id="section-3">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-section-num">Section 4 of 5</div>
+        <h2>Shipment Documents</h2>
+        <p>Every Pakistan → EU textile shipment requires a specific set of documents. A single missing or mismatched document can hold your container at Hamburg or Rotterdam for days — your buyer misses their sale, and you bear the cost.</p>
+      </div>
+      <div class="card-progress">
+        <span class="card-pct" id="pct-3">0%</span>
+        <span class="card-pct-label">complete</span>
+        <div class="card-mini-track"><div class="card-mini-fill" id="fill-3"></div></div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">🚢</span>
+      <div><strong>Important for Hungary-bound shipments:</strong> Hungary is in the EU Customs Union. Your container does not clear customs in Budapest — it clears at the first EU port of entry: Hamburg, Rotterdam, or Koper. Your buyer's customs agent there handles clearance. If documents are wrong, the delay happens in Germany or the Netherlands, not Hungary.</div>
+    </div>
+
+    <div class="checklist" id="checklist-3">
+      <div class="check-divider">Core Shipping Documents</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">Commercial invoice is complete: correct HS codes, full company names, actual transaction value <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">Do not undervalue the invoice to reduce duties — EU customs has price databases and will challenge suspicious valuations. Undervaluation is a legal risk for both you and your buyer. Declare the real price.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">Packing list totals match the invoice exactly — same quantities, same HS codes</div>
+          <div class="item-detail">Invoice: 500 units HS 6302. Packing list: 500 units HS 6302. Bill of lading: 500 units HS 6302. All three must agree. Any mismatch is an automatic customs flag.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">Bill of lading or airway bill is issued and shows the correct port of discharge</div>
+          <div class="item-detail">Sea freight: port of discharge should be Hamburg (Germany), Rotterdam (Netherlands), or Koper (Slovenia) — not "Budapest." Goods travel by truck from the EU port to Hungary after customs clearance.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">Compliance Documents</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">GSP+ origin declaration (REX on invoice) or Form A certificate is included <span class="item-tag tag-critical">Critical</span></div>
+          <div class="item-detail">This is the document that triggers the zero tariff. Without it, your buyer pays full MFN duty (9–12% for garments). This document is your financial responsibility to provide correctly.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">REACH test certificate (from SGS, BV, or Intertek) is included in the document pack</div>
+          <div class="item-detail">The certificate must cover all fabric types in this shipment and be less than 12 months old. Send the PDF to your buyer and freight forwarder before the vessel departs Karachi.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have cross-checked all documents against each other before sending to the freight forwarder</div>
+          <div class="item-detail">Final cross-check: do the invoice HS codes, quantities, and unit prices all match the packing list? Does the bill of lading match both? Five minutes of checking here prevents days of customs delays.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 5 — SUSTAINABILITY
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section-card" id="section-4">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-section-num">Section 5 of 5</div>
+        <h2>Sustainability & Factory Profile</h2>
+        <p>Large EU fashion brands and retailers must report on their supply chains under EU sustainability rules. This means they will ask you — their Pakistani supplier — for information about your factory. Being ready to answer wins contracts.</p>
+      </div>
+      <div class="card-progress">
+        <span class="card-pct" id="pct-4">0%</span>
+        <span class="card-pct-label">complete</span>
+        <div class="card-mini-track"><div class="card-mini-fill" id="fill-4"></div></div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">📋</span>
+      <div><strong>Does the EU CSRD apply to Ahmed's factory directly?</strong> No. The EU Corporate Sustainability Reporting Directive (simplified December 2025) now applies only to companies with more than 1,000 employees and more than €450M turnover. Ahmed's factory is not directly obligated. But Ahmed's EU buyers ARE — and they will ask Ahmed for data.</div>
+    </div>
+
+    <div class="ahmed-tip">
+      <div class="ahmed-tip-icon">💡</div>
+      <div class="ahmed-tip-body">
+        <strong>Ahmed's Tip</strong>
+        <p>Ahmed sends a one-page factory profile with every new buyer enquiry — before they even ask. It includes worker numbers, wages vs minimum wage, his no-child-labour policy, and his SMETA audit date. Buyers who receive this immediately rank him above suppliers who cannot answer basic questions.</p>
+      </div>
+    </div>
+
+    <div class="checklist" id="checklist-4">
+      <div class="check-divider">Factory Profile Document</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have a one-page factory profile document ready to email to any new buyer <span class="item-tag tag-action">Action</span></div>
+          <div class="item-detail">Must include: total workers, % women workers, average wage vs Pakistani minimum wage, working hours policy, child labour policy (written), health & safety basics, and any certifications held.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">My factory profile includes a written child labour policy and minimum age verification process</div>
+          <div class="item-detail">EU buyers will not work with suppliers who cannot demonstrate a written policy. A simple one-paragraph statement saying "We do not employ anyone under 18 and verify age at hiring" is sufficient to start.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">Social Compliance Certification</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I have, or am actively planning, a SMETA social compliance audit</div>
+          <div class="item-detail">SMETA (Sedex Members Ethical Trade Audit) is the most widely requested audit by EU fashion and retail buyers. Cost: approximately $600–$1,200. Conducted by SGS, Bureau Veritas, or Intertek. Valid 1–2 years. Register on sedexglobal.com.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I keep records of my material inputs — yarn suppliers, fabric suppliers, dye suppliers, countries of origin</div>
+          <div class="item-detail">The EU Digital Product Passport for textiles is coming (~2027–2028). It will require a QR code on every product linking to material and production data. Start recording this now — building it retroactively is very difficult.</div>
+        </div>
+      </div>
+
+      <div class="check-divider">Coming Soon — Digital Product Passport</div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I am aware the EU Digital Product Passport is coming (~2027–2028) and I am keeping production records now <span class="item-tag tag-action">Coming Soon</span></div>
+          <div class="item-detail">Not required yet. But factories that can provide full material traceability data when it becomes mandatory will have a significant competitive advantage over those who cannot.</div>
+        </div>
+      </div>
+
+      <div class="check-item" onclick="toggleItem(this)">
+        <div class="checkbox"><svg viewBox="0 0 13 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 5,9 12,1"/></svg></div>
+        <div class="item-body">
+          <div class="item-text">I understand that CSRD does not apply directly to my factory but does affect what my EU buyers will ask me</div>
+          <div class="item-detail">Large EU retailers (Zara, H&M, Primark, major Hungarian chains) must report on their supply chains. They will pass these questions to you. Having your factory profile ready means you are never caught off guard by a buyer's sustainability questionnaire.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>EU Export Compliance Checker</strong>
+      <p>A free practical tool for Pakistani textile exporters navigating EU market access. Built on current 2025–2026 EU regulations including GSP+ rules, REACH restrictions, EU Textile Labelling Regulation, and post-Omnibus I sustainability requirements.</p>
+      <a href="https://www.linkedin.com/in/ahmad-ali-2b6358231" target="_blank" class="footer-author">
+        <div class="author-avatar">AA</div>
+        <div class="author-info">
+          <strong>Ali Ahmad</strong>
+          <small>Procurement & Supply Chain · Budapest</small>
+        </div>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Key Contacts</h4>
+      <a href="https://tdap.gov.pk" target="_blank">TDAP Pakistan</a>
+      <a href="mailto:sgspakistan@sgs.com">SGS Pakistan</a>
+      <a href="mailto:bvpakistan@bureauveritas.com">Bureau Veritas Pakistan</a>
+      <a href="mailto:pakistan@intertek.com">Intertek Pakistan</a>
+      <a href="#">Embassy of Pakistan, Budapest</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Key Resources</h4>
+      <a href="https://tdap.gov.pk" target="_blank">tdap.gov.pk</a>
+      <a href="https://ec.europa.eu/taxation_customs" target="_blank">EU TARIC / Tariff Database</a>
+      <a href="https://echa.europa.eu" target="_blank">REACH Substance Lists</a>
+      <a href="https://sedexglobal.com" target="_blank">Sedex / SMETA Platform</a>
+      <a href="https://europa.eu/trade" target="_blank">EU Trade & GSP Info</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>Developed in cooperation with the Commercial Wing, Embassy of Pakistan, Budapest · 2026</span>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span class="update-badge">
+        <span class="update-dot"></span>
+        Current as of 2026 · Review annually
+      </span>
+      <span>Free to use and share</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JavaScript ─────────────────────────────────────────── -->
+<script>
+const TOTAL_ITEMS = 31;
+const sectionCounts = [8, 6, 5, 6, 6];
+let allSectionsVisible = false;
+
+// ── Toggle individual checklist item ─────────────────────
+function toggleItem(el) {
+  el.classList.toggle('checked');
+  updateProgress();
+}
+
+// ── Update all progress indicators ───────────────────────
+function updateProgress() {
+  let totalChecked = 0;
+
+  for (let i = 0; i < 5; i++) {
+    const items = document.querySelectorAll(`#checklist-${i} .check-item`);
+    const checked = document.querySelectorAll(`#checklist-${i} .check-item.checked`).length;
+    const pct = items.length > 0 ? Math.round((checked / items.length) * 100) : 0;
+
+    document.getElementById(`pct-${i}`).textContent = pct + '%';
+    document.getElementById(`fill-${i}`).style.width = pct + '%';
+
+    // Update tab badge
+    const badge = document.getElementById(`tab${i}badge`);
+    if (badge) {
+      const remaining = items.length - checked;
+      badge.textContent = remaining === 0 ? '✓' : remaining;
+    }
+
+    // Mark tab as complete
+    const tabs = document.querySelectorAll('.tab-btn');
+    if (tabs[i]) {
+      if (checked === items.length && items.length > 0) {
+        tabs[i].classList.add('complete');
+      } else {
+        tabs[i].classList.remove('complete');
+      }
+    }
+
+    totalChecked += checked;
+  }
+
+  // Overall progress
+  const overallPct = Math.round((totalChecked / TOTAL_ITEMS) * 100);
+  document.getElementById('progressFill').style.width = overallPct + '%';
+  document.getElementById('progressPct').textContent = overallPct + '%';
+  document.getElementById('progressStatus').textContent = `${totalChecked} of ${TOTAL_ITEMS} items checked`;
+
+  // Update label colour dynamically
+  const fill = document.getElementById('progressFill');
+  if (overallPct >= 80) {
+    fill.style.background = 'linear-gradient(90deg, #1A5C38 0%, #27AE60 100%)';
+  } else if (overallPct >= 50) {
+    fill.style.background = 'linear-gradient(90deg, #1A5C38 0%, #2E7D52 100%)';
+  }
+
+  // Result banner
+  const banner = document.getElementById('resultBanner');
+  if (totalChecked === TOTAL_ITEMS) {
+    banner.classList.add('show');
+    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    banner.classList.remove('show');
+  }
+}
+
+// ── Section tabs ─────────────────────────────────────────
+function showSection(idx, btn) {
+  if (allSectionsVisible) {
+    // Reset to single section view
+    allSectionsVisible = false;
+    document.getElementById('mainContent').classList.remove('all-sections');
+  }
+
+  // Hide all sections
+  document.querySelectorAll('.section-card').forEach(c => c.classList.remove('visible'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+  // Show target
+  document.getElementById(`section-${idx}`).classList.add('visible');
+  btn.classList.add('active');
+}
+
+// ── Toggle all sections ───────────────────────────────────
+function toggleAllSections() {
+  allSectionsVisible = !allSectionsVisible;
+  const main = document.getElementById('mainContent');
+
+  if (allSectionsVisible) {
+    main.classList.add('all-sections');
+    document.querySelectorAll('.section-card').forEach(c => c.classList.add('visible'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  } else {
+    main.classList.remove('all-sections');
+    document.querySelectorAll('.section-card').forEach(c => c.classList.remove('visible'));
+    document.getElementById('section-0').classList.add('visible');
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+  }
+}
+
+// ── Init ─────────────────────────────────────────────────
+updateProgress();
+</script>
+</body>
+</html>
